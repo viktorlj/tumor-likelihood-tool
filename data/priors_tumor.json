@@ -1,0 +1,122 @@
+{
+  "level": "tumor",
+  "class_column": "TUMOR_TYPE",
+  "total_samples": 179565,
+  "classes": [
+    {
+      "class_name": "LUNG",
+      "sample_count": 33040,
+      "prior_probability": 0.18400022276056024
+    },
+    {
+      "class_name": "COLORECTAL",
+      "sample_count": 20222,
+      "prior_probability": 0.1126166012307521
+    },
+    {
+      "class_name": "BREAST",
+      "sample_count": 17190,
+      "prior_probability": 0.09573135076434718
+    },
+    {
+      "class_name": "CNS",
+      "sample_count": 17163,
+      "prior_probability": 0.09558098738618327
+    },
+    {
+      "class_name": "GYN",
+      "sample_count": 16421,
+      "prior_probability": 0.09144877899367918
+    },
+    {
+      "class_name": "PANCREATOBILIARY",
+      "sample_count": 12506,
+      "prior_probability": 0.06964608915991424
+    },
+    {
+      "class_name": "SOFT_TISSUE",
+      "sample_count": 9482,
+      "prior_probability": 0.05280539080555788
+    },
+    {
+      "class_name": "SKIN_AND_MELANOMA",
+      "sample_count": 9215,
+      "prior_probability": 0.051318464065937125
+    },
+    {
+      "class_name": "PROSTATE",
+      "sample_count": 8023,
+      "prior_probability": 0.04468019937070142
+    },
+    {
+      "class_name": "MBL",
+      "sample_count": 6653,
+      "prior_probability": 0.03705065018238521
+    },
+    {
+      "class_name": "ESOPHAGOGASTRIC",
+      "sample_count": 6413,
+      "prior_probability": 0.03571408682092835
+    },
+    {
+      "class_name": "BLADDER",
+      "sample_count": 5979,
+      "prior_probability": 0.03329713474229388
+    },
+    {
+      "class_name": "RENAL",
+      "sample_count": 3289,
+      "prior_probability": 0.018316487065964972
+    },
+    {
+      "class_name": "HEAD_NECK",
+      "sample_count": 3254,
+      "prior_probability": 0.018121571575752515
+    },
+    {
+      "class_name": "THYROID",
+      "sample_count": 2996,
+      "prior_probability": 0.016684765962186394
+    },
+    {
+      "class_name": "GIST",
+      "sample_count": 1938,
+      "prior_probability": 0.010792749143764097
+    },
+    {
+      "class_name": "MESOTHELIOMA",
+      "sample_count": 1170,
+      "prior_probability": 0.006515746387102164
+    },
+    {
+      "class_name": "NEUROBLASTOMA",
+      "sample_count": 1125,
+      "prior_probability": 0.006265140756829004
+    },
+    {
+      "class_name": "GERM_CELL",
+      "sample_count": 1107,
+      "prior_probability": 0.006164898504719739
+    },
+    {
+      "class_name": "HEPATO",
+      "sample_count": 1017,
+      "prior_probability": 0.005663687244173419
+    },
+    {
+      "class_name": "PANET",
+      "sample_count": 796,
+      "prior_probability": 0.004432935148831899
+    },
+    {
+      "class_name": "UVEAL_MEL",
+      "sample_count": 375,
+      "prior_probability": 0.0020883802522763343
+    },
+    {
+      "class_name": "RETINOBLASTOMA",
+      "sample_count": 191,
+      "prior_probability": 0.001063681675159413
+    }
+  ]
+}

@@ -1,0 +1,4072 @@
+{
+  "level": "detailed",
+  "class_column": "CANCER_TYPE_DETAILED",
+  "total_samples": 226813,
+  "classes": [
+    {
+      "class_name": "Lung Adenocarcinoma",
+      "sample_count": 23897,
+      "prior_probability": 0.10535992205032339
+    },
+    {
+      "class_name": "Colon Adenocarcinoma",
+      "sample_count": 11714,
+      "prior_probability": 0.05164606966972793
+    },
+    {
+      "class_name": "Pancreatic Adenocarcinoma",
+      "sample_count": 8755,
+      "prior_probability": 0.03860008024231415
+    },
+    {
+      "class_name": "Breast Invasive Ductal Carcinoma",
+      "sample_count": 8521,
+      "prior_probability": 0.03756839334606041
+    },
+    {
+      "class_name": "Prostate Adenocarcinoma",
+      "sample_count": 8023,
+      "prior_probability": 0.03537275200275117
+    },
+    {
+      "class_name": "UNKNOWN",
+      "sample_count": 6140,
+      "prior_probability": 0.02707075873076058
+    },
+    {
+      "class_name": "Invasive Breast Carcinoma",
+      "sample_count": 5140,
+      "prior_probability": 0.022661840370701857
+    },
+    {
+      "class_name": "High-Grade Serous Ovarian Cancer",
+      "sample_count": 5075,
+      "prior_probability": 0.022375260677298038
+    },
+    {
+      "class_name": "Bladder Urothelial Carcinoma",
+      "sample_count": 4832,
+      "prior_probability": 0.02130389351580377
+    },
+    {
+      "class_name": "Melanoma",
+      "sample_count": 4550,
+      "prior_probability": 0.020060578538267208
+    },
+    {
+      "class_name": "Acute Myeloid Leukemia",
+      "sample_count": 3894,
+      "prior_probability": 0.017168328094068683
+    },
+    {
+      "class_name": "Uterine Endometrioid Carcinoma",
+      "sample_count": 3889,
+      "prior_probability": 0.01714628350226839
+    },
+    {
+      "class_name": "Rectal Adenocarcinoma",
+      "sample_count": 3712,
+      "prior_probability": 0.016365904952537993
+    },
+    {
+      "class_name": "Lung Squamous Cell Carcinoma",
+      "sample_count": 3546,
+      "prior_probability": 0.015634024504768244
+    },
+    {
+      "class_name": "Glioblastoma Multiforme",
+      "sample_count": 3484,
+      "prior_probability": 0.015360671566444604
+    },
+    {
+      "class_name": "Colorectal Adenocarcinoma",
+      "sample_count": 3338,
+      "prior_probability": 0.01471696948587603
+    },
+    {
+      "class_name": "Glioblastoma",
+      "sample_count": 3027,
+      "prior_probability": 0.013345795875897766
+    },
+    {
+      "class_name": "Non-Small Cell Lung Cancer",
+      "sample_count": 2509,
+      "prior_probability": 0.011061976165387346
+    },
+    {
+      "class_name": "Chronic Lymphocytic Leukemia/Small Lymphocytic Lymphoma",
+      "sample_count": 2254,
+      "prior_probability": 0.00993770198357237
+    },
+    {
+      "class_name": "Adenocarcinoma, NOS",
+      "sample_count": 2039,
+      "prior_probability": 0.008989784536159744
+    },
+    {
+      "class_name": "Gastrointestinal Stromal Tumor",
+      "sample_count": 1938,
+      "prior_probability": 0.008544483781793812
+    },
+    {
+      "class_name": "Cutaneous Melanoma",
+      "sample_count": 1907,
+      "prior_probability": 0.008407807312631991
+    },
+    {
+      "class_name": "Esophageal Adenocarcinoma",
+      "sample_count": 1903,
+      "prior_probability": 0.008390171639191757
+    },
+    {
+      "class_name": "Stomach Adenocarcinoma",
+      "sample_count": 1802,
+      "prior_probability": 0.007944870884825825
+    },
+    {
+      "class_name": "Plasma Cell Myeloma",
+      "sample_count": 1794,
+      "prior_probability": 0.007909599537945356
+    },
+    {
+      "class_name": "Papillary Thyroid Cancer",
+      "sample_count": 1763,
+      "prior_probability": 0.0077729230687835354
+    },
+    {
+      "class_name": "Renal Clear Cell Carcinoma",
+      "sample_count": 1659,
+      "prior_probability": 0.0073143955593374275
+    },
+    {
+      "class_name": "Cancer of Unknown Primary",
+      "sample_count": 1602,
+      "prior_probability": 0.007063087212814081
+    },
+    {
+      "class_name": "Breast Invasive Lobular Carcinoma",
+      "sample_count": 1530,
+      "prior_probability": 0.006745645090889852
+    },
+    {
+      "class_name": "Diffuse Large B-Cell Lymphoma, NOS",
+      "sample_count": 1505,
+      "prior_probability": 0.006635422131888384
+    },
+    {
+      "class_name": "Intrahepatic Cholangiocarcinoma",
+      "sample_count": 1322,
+      "prior_probability": 0.005828590071997637
+    },
+    {
+      "class_name": "Uterine Serous Carcinoma/Uterine Papillary Serous Carcinoma",
+      "sample_count": 1292,
+      "prior_probability": 0.005696322521195875
+    },
+    {
+      "class_name": "Endometrial Carcinoma",
+      "sample_count": 1283,
+      "prior_probability": 0.005656642255955346
+    },
+    {
+      "class_name": "Myeloproliferative Neoplasms",
+      "sample_count": 1222,
+      "prior_probability": 0.005387698235991764
+    },
+    {
+      "class_name": "Myelodysplastic Syndromes",
+      "sample_count": 1196,
+      "prior_probability": 0.005273066358630237
+    },
+    {
+      "class_name": "Cholangiocarcinoma",
+      "sample_count": 1183,
+      "prior_probability": 0.0052157504199494735
+    },
+    {
+      "class_name": "Small Cell Lung Cancer",
+      "sample_count": 1181,
+      "prior_probability": 0.005206932583229356
+    },
+    {
+      "class_name": "Squamous Cell Carcinoma, NOS",
+      "sample_count": 1084,
+      "prior_probability": 0.00477926750230366
+    },
+    {
+      "class_name": "Neuroblastoma",
+      "sample_count": 1051,
+      "prior_probability": 0.004633773196421722
+    },
+    {
+      "class_name": "AML with Myelodysplasia-Related Changes",
+      "sample_count": 1027,
+      "prior_probability": 0.004527959155780312
+    },
+    {
+      "class_name": "Follicular Lymphoma",
+      "sample_count": 1018,
+      "prior_probability": 0.0044882788905397835
+    },
+    {
+      "class_name": "Sarcoma, NOS",
+      "sample_count": 1005,
+      "prior_probability": 0.0044309629518590205
+    },
+    {
+      "class_name": "Low-Grade Glioma, NOS",
+      "sample_count": 977,
+      "prior_probability": 0.004307513237777376
+    },
+    {
+      "class_name": "Mature B-Cell Neoplasms",
+      "sample_count": 972,
+      "prior_probability": 0.004285468645977082
+    },
+    {
+      "class_name": "Meningioma",
+      "sample_count": 936,
+      "prior_probability": 0.004126747585014968
+    },
+    {
+      "class_name": "High-Grade Glioma, NOS",
+      "sample_count": 931,
+      "prior_probability": 0.004104702993214675
+    },
+    {
+      "class_name": "Adenocarcinoma of the Gastroesophageal Junction",
+      "sample_count": 921,
+      "prior_probability": 0.004060613809614087
+    },
+    {
+      "class_name": "Head and Neck Squamous Cell Carcinoma",
+      "sample_count": 899,
+      "prior_probability": 0.003963617605692795
+    },
+    {
+      "class_name": "Hepatocellular Carcinoma",
+      "sample_count": 892,
+      "prior_probability": 0.003932755177172384
+    },
+    {
+      "class_name": "B-Lymphoblastic Leukemia/Lymphoma",
+      "sample_count": 876,
+      "prior_probability": 0.003862212483411445
+    },
+    {
+      "class_name": "Uterine Carcinosarcoma/Uterine Malignant Mixed Mullerian Tumor",
+      "sample_count": 857,
+      "prior_probability": 0.003778443034570329
+    },
+    {
+      "class_name": "Upper Tract Urothelial Carcinoma",
+      "sample_count": 852,
+      "prior_probability": 0.0037563984427700352
+    },
+    {
+      "class_name": "Leiomyosarcoma",
+      "sample_count": 837,
+      "prior_probability": 0.0036902646673691543
+    },
+    {
+      "class_name": "Mantle Cell Lymphoma",
+      "sample_count": 824,
+      "prior_probability": 0.003632948728688391
+    },
+    {
+      "class_name": "Astrocytoma",
+      "sample_count": 813,
+      "prior_probability": 0.003584450626727745
+    },
+    {
+      "class_name": "Pancreatic Neuroendocrine Tumor",
+      "sample_count": 796,
+      "prior_probability": 0.0035094990146067465
+    },
+    {
+      "class_name": "Breast Invasive Cancer, NOS",
+      "sample_count": 750,
+      "prior_probability": 0.003306688770044045
+    },
+    {
+      "class_name": "Poorly Differentiated Carcinoma, NOS",
+      "sample_count": 749,
+      "prior_probability": 0.0033022798516839863
+    },
+    {
+      "class_name": "Renal Cell Carcinoma",
+      "sample_count": 684,
+      "prior_probability": 0.003015700158280169
+    },
+    {
+      "class_name": "Oligodendroglioma",
+      "sample_count": 675,
+      "prior_probability": 0.0029760198930396404
+    },
+    {
+      "class_name": "Esophagogastric Adenocarcinoma",
+      "sample_count": 665,
+      "prior_probability": 0.002931930709439053
+    },
+    {
+      "class_name": "Breast Invasive Carcinoma, NOS",
+      "sample_count": 646,
+      "prior_probability": 0.0028481612605979374
+    },
+    {
+      "class_name": "Oral Cavity Squamous Cell Carcinoma",
+      "sample_count": 626,
+      "prior_probability": 0.002759982893396763
+    },
+    {
+      "class_name": "Pilocytic Astrocytoma",
+      "sample_count": 616,
+      "prior_probability": 0.002715893709796176
+    },
+    {
+      "class_name": "Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma",
+      "sample_count": 611,
+      "prior_probability": 0.002693849117995882
+    },
+    {
+      "class_name": "Diffuse Glioma",
+      "sample_count": 604,
+      "prior_probability": 0.002662986689475471
+    },
+    {
+      "class_name": "Cancer of Unknown Primary, NOS",
+      "sample_count": 563,
+      "prior_probability": 0.0024822210367130633
+    },
+    {
+      "class_name": "Anaplastic Astrocytoma",
+      "sample_count": 552,
+      "prior_probability": 0.002433722934752417
+    },
+    {
+      "class_name": "Pleural Mesothelioma, Epithelioid Type",
+      "sample_count": 547,
+      "prior_probability": 0.0024116783429521237
+    },
+    {
+      "class_name": "Clear Cell Ovarian Cancer",
+      "sample_count": 539,
+      "prior_probability": 0.0023764069960716537
+    },
+    {
+      "class_name": "Dedifferentiated Liposarcoma",
+      "sample_count": 521,
+      "prior_probability": 0.0022970464655905965
+    },
+    {
+      "class_name": "MDS with excess blasts-2",
+      "sample_count": 514,
+      "prior_probability": 0.0022661840370701855
+    },
+    {
+      "class_name": "Myeloid Neoplasm",
+      "sample_count": 501,
+      "prior_probability": 0.002208868098389422
+    },
+    {
+      "class_name": "AML with Mutated NPM1",
+      "sample_count": 499,
+      "prior_probability": 0.0022000502616693045
+    },
+    {
+      "class_name": "Neuroendocrine Tumor, NOS",
+      "sample_count": 491,
+      "prior_probability": 0.002164778914788835
+    },
+    {
+      "class_name": "Osteosarcoma",
+      "sample_count": 487,
+      "prior_probability": 0.0021471432413485998
+    },
+    {
+      "class_name": "Therapy-Related Acute Myeloid Leukemia",
+      "sample_count": 486,
+      "prior_probability": 0.002142734322988541
+    },
+    {
+      "class_name": "Adenoid Cystic Carcinoma",
+      "sample_count": 477,
+      "prior_probability": 0.0021030540577480126
+    },
+    {
+      "class_name": "Anal Squamous Cell Carcinoma",
+      "sample_count": 476,
+      "prior_probability": 0.002098645139387954
+    },
+    {
+      "class_name": "High-Grade Serous Fallopian Tube Cancer",
+      "sample_count": 475,
+      "prior_probability": 0.0020942362210278954
+    },
+    {
+      "class_name": "Esophageal Squamous Cell Carcinoma",
+      "sample_count": 467,
+      "prior_probability": 0.0020589648741474254
+    },
+    {
+      "class_name": "Merkel Cell Carcinoma",
+      "sample_count": 459,
+      "prior_probability": 0.002023693527266956
+    },
+    {
+      "class_name": "Low-Grade Serous Ovarian Cancer",
+      "sample_count": 455,
+      "prior_probability": 0.0020060578538267206
+    },
+    {
+      "class_name": "Uterine Leiomyosarcoma",
+      "sample_count": 451,
+      "prior_probability": 0.001988422180386486
+    },
+    {
+      "class_name": "Cervical Squamous Cell Carcinoma",
+      "sample_count": 451,
+      "prior_probability": 0.001988422180386486
+    },
+    {
+      "class_name": "Diffuse Astrocytoma",
+      "sample_count": 437,
+      "prior_probability": 0.0019266973233456636
+    },
+    {
+      "class_name": "Neuroendocrine Carcinoma, NOS",
+      "sample_count": 436,
+      "prior_probability": 0.0019222884049856048
+    },
+    {
+      "class_name": "Serous Ovarian Cancer",
+      "sample_count": 424,
+      "prior_probability": 0.0018693813846649002
+    },
+    {
+      "class_name": "Endometrioid Ovarian Cancer",
+      "sample_count": 420,
+      "prior_probability": 0.0018517457112246652
+    },
+    {
+      "class_name": "Oropharynx Squamous Cell Carcinoma",
+      "sample_count": 411,
+      "prior_probability": 0.0018120654459841366
+    },
+    {
+      "class_name": "Mixed Germ Cell Tumor",
+      "sample_count": 409,
+      "prior_probability": 0.0018032476092640192
+    },
+    {
+      "class_name": "Mucinous Adenocarcinoma of the Colon and Rectum",
+      "sample_count": 406,
+      "prior_probability": 0.001790020854183843
+    },
+    {
+      "class_name": "Cutaneous Squamous Cell Carcinoma",
+      "sample_count": 400,
+      "prior_probability": 0.0017635673440234906
+    },
+    {
+      "class_name": "Medulloblastoma",
+      "sample_count": 399,
+      "prior_probability": 0.001759158425663432
+    },
+    {
+      "class_name": "Atypical Meningioma",
+      "sample_count": 397,
+      "prior_probability": 0.0017503405889433144
+    },
+    {
+      "class_name": "Atypical Nevus",
+      "sample_count": 389,
+      "prior_probability": 0.0017150692420628447
+    },
+    {
+      "class_name": "Polycythemia Vera",
+      "sample_count": 378,
+      "prior_probability": 0.0016665711401021987
+    },
+    {
+      "class_name": "Uveal Melanoma",
+      "sample_count": 375,
+      "prior_probability": 0.0016533443850220225
+    },
+    {
+      "class_name": "Poorly Differentiated Thyroid Cancer",
+      "sample_count": 374,
+      "prior_probability": 0.0016489354666619639
+    },
+    {
+      "class_name": "Ewing Sarcoma",
+      "sample_count": 373,
+      "prior_probability": 0.001644526548301905
+    },
+    {
+      "class_name": "Hemangioma",
+      "sample_count": 373,
+      "prior_probability": 0.001644526548301905
+    },
+    {
+      "class_name": "Large Cell Neuroendocrine Carcinoma",
+      "sample_count": 371,
+      "prior_probability": 0.0016357087115817877
+    },
+    {
+      "class_name": "B-Lymphoblastic Leukemia/Lymphoma, NOS",
+      "sample_count": 360,
+      "prior_probability": 0.0015872106096211417
+    },
+    {
+      "class_name": "T-Lymphoblastic Leukemia/Lymphoma",
+      "sample_count": 358,
+      "prior_probability": 0.0015783927729010243
+    },
+    {
+      "class_name": "Mucinous Adenocarcinoma of the Appendix",
+      "sample_count": 356,
+      "prior_probability": 0.0015695749361809067
+    },
+    {
+      "class_name": "Glioma, NOS",
+      "sample_count": 356,
+      "prior_probability": 0.0015695749361809067
+    },
+    {
+      "class_name": "Gallbladder Cancer",
+      "sample_count": 347,
+      "prior_probability": 0.0015298946709403783
+    },
+    {
+      "class_name": "Breast Mixed Ductal and Lobular Carcinoma",
+      "sample_count": 346,
+      "prior_probability": 0.0015254857525803195
+    },
+    {
+      "class_name": "Appendiceal Adenocarcinoma",
+      "sample_count": 345,
+      "prior_probability": 0.0015210768342202607
+    },
+    {
+      "class_name": "Ependymoma",
+      "sample_count": 341,
+      "prior_probability": 0.001503441160780026
+    },
+    {
+      "class_name": "Lung Carcinoid",
+      "sample_count": 340,
+      "prior_probability": 0.001499032242419967
+    },
+    {
+      "class_name": "Primary Myelofibrosis",
+      "sample_count": 337,
+      "prior_probability": 0.001485805487339791
+    },
+    {
+      "class_name": "Anaplastic Thyroid Cancer",
+      "sample_count": 323,
+      "prior_probability": 0.0014240806302989687
+    },
+    {
+      "class_name": "Lung",
+      "sample_count": 320,
+      "prior_probability": 0.0014108538752187925
+    },
+    {
+      "class_name": "Peripheral T-Cell lymphoma, NOS",
+      "sample_count": 319,
+      "prior_probability": 0.001406444956858734
+    },
+    {
+      "class_name": "Gallbladder Adenocarcinoma, NOS",
+      "sample_count": 316,
+      "prior_probability": 0.0013932182017785577
+    },
+    {
+      "class_name": "Langerhans Cell Histiocytosis",
+      "sample_count": 314,
+      "prior_probability": 0.0013844003650584401
+    },
+    {
+      "class_name": "Melanoma of Unknown Primary",
+      "sample_count": 309,
+      "prior_probability": 0.0013623557732581465
+    },
+    {
+      "class_name": "Small Bowel Well-Differentiated Neuroendocrine Tumor",
+      "sample_count": 306,
+      "prior_probability": 0.0013491290181779703
+    },
+    {
+      "class_name": "MDS with excess blasts-1",
+      "sample_count": 301,
+      "prior_probability": 0.0013270844263776767
+    },
+    {
+      "class_name": "Anaplastic Oligodendroglioma",
+      "sample_count": 300,
+      "prior_probability": 0.0013226755080176181
+    },
+    {
+      "class_name": "Medullary Thyroid Cancer",
+      "sample_count": 300,
+      "prior_probability": 0.0013226755080176181
+    },
+    {
+      "class_name": "Lymphoid Atypical",
+      "sample_count": 300,
+      "prior_probability": 0.0013226755080176181
+    },
+    {
+      "class_name": "Poorly Differentiated Non-Small Cell Lung Cancer",
+      "sample_count": 298,
+      "prior_probability": 0.0013138576712975005
+    },
+    {
+      "class_name": "Pleural Mesothelioma",
+      "sample_count": 296,
+      "prior_probability": 0.0013050398345773831
+    },
+    {
+      "class_name": "Ovarian Carcinosarcoma/Malignant Mixed Mesodermal Tumor",
+      "sample_count": 290,
+      "prior_probability": 0.0012785863244170307
+    },
+    {
+      "class_name": "Chronic Myelogenous Leukemia",
+      "sample_count": 289,
+      "prior_probability": 0.001274177406056972
+    },
+    {
+      "class_name": "Chronic Myelomonocytic Leukemia",
+      "sample_count": 287,
+      "prior_probability": 0.0012653595693368545
+    },
+    {
+      "class_name": "Gastrointestinal Neuroendocrine Tumors",
+      "sample_count": 286,
+      "prior_probability": 0.001260950650976796
+    },
+    {
+      "class_name": "Pituitary Adenoma",
+      "sample_count": 286,
+      "prior_probability": 0.001260950650976796
+    },
+    {
+      "class_name": "Synovial Sarcoma",
+      "sample_count": 278,
+      "prior_probability": 0.001225679304096326
+    },
+    {
+      "class_name": "Ganglioglioma",
+      "sample_count": 276,
+      "prior_probability": 0.0012168614673762086
+    },
+    {
+      "class_name": "Wilms' Tumor",
+      "sample_count": 273,
+      "prior_probability": 0.0012036347122960324
+    },
+    {
+      "class_name": "Ampullary Carcinoma",
+      "sample_count": 271,
+      "prior_probability": 0.001194816875575915
+    },
+    {
+      "class_name": "Papillary Renal Cell Carcinoma",
+      "sample_count": 271,
+      "prior_probability": 0.001194816875575915
+    },
+    {
+      "class_name": "Angioimmunoblastic T-Cell Lymphoma",
+      "sample_count": 266,
+      "prior_probability": 0.0011727722837756214
+    },
+    {
+      "class_name": "Therapy-Related Myelodysplastic Syndrome",
+      "sample_count": 264,
+      "prior_probability": 0.001163954447055504
+    },
+    {
+      "class_name": "Adrenocortical Carcinoma",
+      "sample_count": 263,
+      "prior_probability": 0.0011595455286954452
+    },
+    {
+      "class_name": "Desmoid/Aggressive Fibromatosis",
+      "sample_count": 263,
+      "prior_probability": 0.0011595455286954452
+    },
+    {
+      "class_name": "Angiosarcoma",
+      "sample_count": 262,
+      "prior_probability": 0.0011551366103353864
+    },
+    {
+      "class_name": "Extrahepatic Cholangiocarcinoma",
+      "sample_count": 258,
+      "prior_probability": 0.0011375009368951516
+    },
+    {
+      "class_name": "Malignant Peripheral Nerve Sheath Tumor",
+      "sample_count": 256,
+      "prior_probability": 0.001128683100175034
+    },
+    {
+      "class_name": "AML, NOS",
+      "sample_count": 256,
+      "prior_probability": 0.001128683100175034
+    },
+    {
+      "class_name": "Duodenal Adenocarcinoma",
+      "sample_count": 252,
+      "prior_probability": 0.0011110474267347992
+    },
+    {
+      "class_name": "Undifferentiated Malignant Neoplasm",
+      "sample_count": 242,
+      "prior_probability": 0.0010669582431342118
+    },
+    {
+      "class_name": "Schwannoma",
+      "sample_count": 240,
+      "prior_probability": 0.0010581404064140944
+    },
+    {
+      "class_name": "Diffuse Intrinsic Pontine Glioma",
+      "sample_count": 240,
+      "prior_probability": 0.0010581404064140944
+    },
+    {
+      "class_name": "Endocervical Adenocarcinoma",
+      "sample_count": 239,
+      "prior_probability": 0.0010537314880540358
+    },
+    {
+      "class_name": "Myxofibrosarcoma",
+      "sample_count": 234,
+      "prior_probability": 0.001031686896253742
+    },
+    {
+      "class_name": "Essential Thrombocythemia",
+      "sample_count": 233,
+      "prior_probability": 0.0010272779778936834
+    },
+    {
+      "class_name": "Seminoma",
+      "sample_count": 228,
+      "prior_probability": 0.0010052333860933898
+    },
+    {
+      "class_name": "Metaplastic Breast Cancer",
+      "sample_count": 226,
+      "prior_probability": 0.0009964155493732722
+    },
+    {
+      "class_name": "Small Bowel Cancer",
+      "sample_count": 226,
+      "prior_probability": 0.0009964155493732722
+    },
+    {
+      "class_name": "Marginal Zone Lymphoma",
+      "sample_count": 224,
+      "prior_probability": 0.0009875977126531548
+    },
+    {
+      "class_name": "Uterine Clear Cell Carcinoma",
+      "sample_count": 221,
+      "prior_probability": 0.0009743709575729786
+    },
+    {
+      "class_name": "Desmoplastic Small-Round-Cell Tumor",
+      "sample_count": 220,
+      "prior_probability": 0.0009699620392129199
+    },
+    {
+      "class_name": "Salivary Duct Carcinoma",
+      "sample_count": 216,
+      "prior_probability": 0.000952326365772685
+    },
+    {
+      "class_name": "Squamous Cell Carcinoma of the Vulva/Vagina",
+      "sample_count": 214,
+      "prior_probability": 0.0009435085290525675
+    },
+    {
+      "class_name": "Ovarian Epithelial Tumor",
+      "sample_count": 212,
+      "prior_probability": 0.0009346906923324501
+    },
+    {
+      "class_name": "Acral Melanoma",
+      "sample_count": 206,
+      "prior_probability": 0.0009082371821720977
+    },
+    {
+      "class_name": "Granulosa Cell Tumor",
+      "sample_count": 206,
+      "prior_probability": 0.0009082371821720977
+    },
+    {
+      "class_name": "Solitary Fibrous Tumor/Hemangiopericytoma",
+      "sample_count": 204,
+      "prior_probability": 0.0008994193454519802
+    },
+    {
+      "class_name": "Small Cell Carcinoma of Unknown Primary",
+      "sample_count": 203,
+      "prior_probability": 0.0008950104270919215
+    },
+    {
+      "class_name": "Atypical Lung Carcinoid",
+      "sample_count": 202,
+      "prior_probability": 0.0008906015087318628
+    },
+    {
+      "class_name": "Uterine Mixed Endometrial Carcinoma",
+      "sample_count": 200,
+      "prior_probability": 0.0008817836720117453
+    },
+    {
+      "class_name": "Unclassified Renal Cell Carcinoma",
+      "sample_count": 199,
+      "prior_probability": 0.0008773747536516866
+    },
+    {
+      "class_name": "Mucinous Ovarian Cancer",
+      "sample_count": 199,
+      "prior_probability": 0.0008773747536516866
+    },
+    {
+      "class_name": "Peritoneal Mesothelioma",
+      "sample_count": 197,
+      "prior_probability": 0.0008685569169315692
+    },
+    {
+      "class_name": "Mycosis Fungoides",
+      "sample_count": 197,
+      "prior_probability": 0.0008685569169315692
+    },
+    {
+      "class_name": "Chromophobe Renal Cell Carcinoma",
+      "sample_count": 196,
+      "prior_probability": 0.0008641479985715104
+    },
+    {
+      "class_name": "Retinoblastoma",
+      "sample_count": 191,
+      "prior_probability": 0.0008421034067712168
+    },
+    {
+      "class_name": "MDS with Multilineage Dysplasia",
+      "sample_count": 190,
+      "prior_probability": 0.0008376944884111581
+    },
+    {
+      "class_name": "Follicular Thyroid Cancer",
+      "sample_count": 187,
+      "prior_probability": 0.0008244677333309819
+    },
+    {
+      "class_name": "Bladder Adenocarcinoma",
+      "sample_count": 186,
+      "prior_probability": 0.0008200588149709231
+    },
+    {
+      "class_name": "Chondrosarcoma",
+      "sample_count": 184,
+      "prior_probability": 0.0008112409782508057
+    },
+    {
+      "class_name": "Lung Adenosquamous Carcinoma",
+      "sample_count": 184,
+      "prior_probability": 0.0008112409782508057
+    },
+    {
+      "class_name": "Therapy-Related Myeloid Neoplasms",
+      "sample_count": 180,
+      "prior_probability": 0.0007936053048105708
+    },
+    {
+      "class_name": "Poorly Differentiated Carcinoma of the Stomach",
+      "sample_count": 179,
+      "prior_probability": 0.0007891963864505121
+    },
+    {
+      "class_name": "Chronic Myeloid Leukemia, BCR-ABL1+",
+      "sample_count": 179,
+      "prior_probability": 0.0007891963864505121
+    },
+    {
+      "class_name": "High-Grade Neuroendocrine Carcinoma of the Colon and Rectum",
+      "sample_count": 176,
+      "prior_probability": 0.000775969631370336
+    },
+    {
+      "class_name": "Well-Differentiated Liposarcoma",
+      "sample_count": 176,
+      "prior_probability": 0.000775969631370336
+    },
+    {
+      "class_name": "B-Lymphoblastic Leukemia/Lymphoma with t(9;22)(q34.1;q11.2);BCR-ABL1",
+      "sample_count": 175,
+      "prior_probability": 0.0007715607130102771
+    },
+    {
+      "class_name": "Lymphoid Neoplasm",
+      "sample_count": 171,
+      "prior_probability": 0.0007539250395700422
+    },
+    {
+      "class_name": "Embryonal Rhabdomyosarcoma",
+      "sample_count": 170,
+      "prior_probability": 0.0007495161212099835
+    },
+    {
+      "class_name": "Goblet Cell Adenocarcinoma of the Appendix",
+      "sample_count": 167,
+      "prior_probability": 0.0007362893661298074
+    },
+    {
+      "class_name": "Lung Neuroendocrine Tumor",
+      "sample_count": 166,
+      "prior_probability": 0.0007318804477697487
+    },
+    {
+      "class_name": "Rhabdomyosarcoma",
+      "sample_count": 165,
+      "prior_probability": 0.00072747152940969
+    },
+    {
+      "class_name": "Mature T and NK Neoplasms",
+      "sample_count": 165,
+      "prior_probability": 0.00072747152940969
+    },
+    {
+      "class_name": "Essential Thrombocythemia Myelofibrosis",
+      "sample_count": 165,
+      "prior_probability": 0.00072747152940969
+    },
+    {
+      "class_name": "Signet Ring Cell Carcinoma of the Stomach",
+      "sample_count": 159,
+      "prior_probability": 0.0007010180192493376
+    },
+    {
+      "class_name": "Rosai-Dorfman Disease",
+      "sample_count": 158,
+      "prior_probability": 0.0006966091008892789
+    },
+    {
+      "class_name": "Lymphoplasmacytic Lymphoma",
+      "sample_count": 158,
+      "prior_probability": 0.0006966091008892789
+    },
+    {
+      "class_name": "Erdheim-Chester Disease",
+      "sample_count": 156,
+      "prior_probability": 0.0006877912641691614
+    },
+    {
+      "class_name": "Thymoma",
+      "sample_count": 155,
+      "prior_probability": 0.0006833823458091027
+    },
+    {
+      "class_name": "Myxoid/Round-Cell Liposarcoma",
+      "sample_count": 155,
+      "prior_probability": 0.0006833823458091027
+    },
+    {
+      "class_name": "Pancreatobiliary Ampullary Carcinoma",
+      "sample_count": 155,
+      "prior_probability": 0.0006833823458091027
+    },
+    {
+      "class_name": "Melanocytoma",
+      "sample_count": 152,
+      "prior_probability": 0.0006701555907289265
+    },
+    {
+      "class_name": "Anorectal Mucosal Melanoma",
+      "sample_count": 150,
+      "prior_probability": 0.0006613377540088091
+    },
+    {
+      "class_name": "Extramammary Paget Disease",
+      "sample_count": 146,
+      "prior_probability": 0.0006437020805685741
+    },
+    {
+      "class_name": "Hurthle Cell Thyroid Cancer",
+      "sample_count": 144,
+      "prior_probability": 0.0006348842438484567
+    },
+    {
+      "class_name": "Ovarian Cancer, Other",
+      "sample_count": 143,
+      "prior_probability": 0.000630475325488398
+    },
+    {
+      "class_name": "AML with t(8;21)(q22;q22.1);RUNX1-RUNX1T1",
+      "sample_count": 142,
+      "prior_probability": 0.0006260664071283392
+    },
+    {
+      "class_name": "Adenosquamous Carcinoma of the Pancreas",
+      "sample_count": 136,
+      "prior_probability": 0.0005996128969679869
+    },
+    {
+      "class_name": "Yolk Sac Tumor",
+      "sample_count": 135,
+      "prior_probability": 0.0005952039786079281
+    },
+    {
+      "class_name": "Primary Brain Tumor",
+      "sample_count": 133,
+      "prior_probability": 0.0005863861418878107
+    },
+    {
+      "class_name": "Acinar Cell Carcinoma of the Pancreas",
+      "sample_count": 133,
+      "prior_probability": 0.0005863861418878107
+    },
+    {
+      "class_name": "Hairy Cell Leukemia",
+      "sample_count": 132,
+      "prior_probability": 0.000581977223527752
+    },
+    {
+      "class_name": "Head and Neck Mucosal Melanoma",
+      "sample_count": 131,
+      "prior_probability": 0.0005775683051676932
+    },
+    {
+      "class_name": "Anaplastic Ependymoma",
+      "sample_count": 131,
+      "prior_probability": 0.0005775683051676932
+    },
+    {
+      "class_name": "Myelodysplastic/Myeloproliferative Neoplasms",
+      "sample_count": 131,
+      "prior_probability": 0.0005775683051676932
+    },
+    {
+      "class_name": "Mucosal Melanoma of the Vulva/Vagina",
+      "sample_count": 130,
+      "prior_probability": 0.0005731593868076345
+    },
+    {
+      "class_name": "Pleural Mesothelioma, Biphasic Type",
+      "sample_count": 130,
+      "prior_probability": 0.0005731593868076345
+    },
+    {
+      "class_name": "Histiocytic and Dendritic Cell Neoplasms",
+      "sample_count": 129,
+      "prior_probability": 0.0005687504684475758
+    },
+    {
+      "class_name": "Peritoneal Serous Carcinoma",
+      "sample_count": 128,
+      "prior_probability": 0.000564341550087517
+    },
+    {
+      "class_name": "Alveolar Rhabdomyosarcoma",
+      "sample_count": 127,
+      "prior_probability": 0.0005599326317274583
+    },
+    {
+      "class_name": "Primary Myelofibrosis,Overt Fibrotic Stage",
+      "sample_count": 127,
+      "prior_probability": 0.0005599326317274583
+    },
+    {
+      "class_name": "Larynx Squamous Cell Carcinoma",
+      "sample_count": 127,
+      "prior_probability": 0.0005599326317274583
+    },
+    {
+      "class_name": "Basal Cell Carcinoma",
+      "sample_count": 125,
+      "prior_probability": 0.0005511147950073409
+    },
+    {
+      "class_name": "Hepatoblastoma",
+      "sample_count": 125,
+      "prior_probability": 0.0005511147950073409
+    },
+    {
+      "class_name": "Chordoma",
+      "sample_count": 123,
+      "prior_probability": 0.0005422969582872234
+    },
+    {
+      "class_name": "Thymic Carcinoma",
+      "sample_count": 121,
+      "prior_probability": 0.0005334791215671059
+    },
+    {
+      "class_name": "AML with inv(16)(p13.1q22) or t(16;16)(p13.1;q22);CBFB-MYH11",
+      "sample_count": 120,
+      "prior_probability": 0.0005290702032070472
+    },
+    {
+      "class_name": "Signet Ring Cell Adenocarcinoma of the Colon and Rectum",
+      "sample_count": 120,
+      "prior_probability": 0.0005290702032070472
+    },
+    {
+      "class_name": "Gliosarcoma",
+      "sample_count": 118,
+      "prior_probability": 0.0005202523664869298
+    },
+    {
+      "class_name": "Perivascular Epithelioid Cell Tumor",
+      "sample_count": 118,
+      "prior_probability": 0.0005202523664869298
+    },
+    {
+      "class_name": "Nasopharyngeal Carcinoma",
+      "sample_count": 115,
+      "prior_probability": 0.0005070256114067536
+    },
+    {
+      "class_name": "Small Intestinal Carcinoma",
+      "sample_count": 113,
+      "prior_probability": 0.0004982077746866361
+    },
+    {
+      "class_name": "Mixed Ovarian Carcinoma",
+      "sample_count": 112,
+      "prior_probability": 0.0004937988563265774
+    },
+    {
+      "class_name": "Breast Neoplasm, NOS",
+      "sample_count": 111,
+      "prior_probability": 0.0004893899379665187
+    },
+    {
+      "class_name": "Neurofibroma",
+      "sample_count": 111,
+      "prior_probability": 0.0004893899379665187
+    },
+    {
+      "class_name": "Mixed Phenotype Acute Leukemia, T/Myeloid, NOS",
+      "sample_count": 110,
+      "prior_probability": 0.00048498101960645995
+    },
+    {
+      "class_name": "Urethral Urothelial Carcinoma",
+      "sample_count": 109,
+      "prior_probability": 0.0004805721012464012
+    },
+    {
+      "class_name": "Cervical Adenocarcinoma",
+      "sample_count": 108,
+      "prior_probability": 0.0004761631828863425
+    },
+    {
+      "class_name": "Classical Hodgkin Lymphoma",
+      "sample_count": 108,
+      "prior_probability": 0.0004761631828863425
+    },
+    {
+      "class_name": "Pleomorphic Carcinoma of the Lung",
+      "sample_count": 108,
+      "prior_probability": 0.0004761631828863425
+    },
+    {
+      "class_name": "Esophageal Poorly Differentiated Carcinoma",
+      "sample_count": 106,
+      "prior_probability": 0.00046734534616622506
+    },
+    {
+      "class_name": "Combined Small Cell Lung Carcinoma",
+      "sample_count": 106,
+      "prior_probability": 0.00046734534616622506
+    },
+    {
+      "class_name": "Diffuse Type Stomach Adenocarcinoma",
+      "sample_count": 104,
+      "prior_probability": 0.0004585275094461076
+    },
+    {
+      "class_name": "Prostate Small Cell Carcinoma",
+      "sample_count": 104,
+      "prior_probability": 0.0004585275094461076
+    },
+    {
+      "class_name": "Sarcomatoid Carcinoma of the Lung",
+      "sample_count": 101,
+      "prior_probability": 0.0004453007543659314
+    },
+    {
+      "class_name": "Small Cell Bladder Cancer",
+      "sample_count": 100,
+      "prior_probability": 0.00044089183600587266
+    },
+    {
+      "class_name": "T-Cell Large Granular Lymphocytic Leukemia",
+      "sample_count": 99,
+      "prior_probability": 0.00043648291764581396
+    },
+    {
+      "class_name": "MDS/MPN, Unclassifiable",
+      "sample_count": 94,
+      "prior_probability": 0.0004144383258455203
+    },
+    {
+      "class_name": "Epithelioid Hemangioendothelioma",
+      "sample_count": 94,
+      "prior_probability": 0.0004144383258455203
+    },
+    {
+      "class_name": "Prostate Neuroendocrine Carcinoma",
+      "sample_count": 93,
+      "prior_probability": 0.00041002940748546157
+    },
+    {
+      "class_name": "Polycythaemia Vera Myelofibrosis",
+      "sample_count": 93,
+      "prior_probability": 0.00041002940748546157
+    },
+    {
+      "class_name": "Salivary Carcinoma",
+      "sample_count": 92,
+      "prior_probability": 0.00040562048912540287
+    },
+    {
+      "class_name": "Tubular Adenoma of the Colon",
+      "sample_count": 92,
+      "prior_probability": 0.00040562048912540287
+    },
+    {
+      "class_name": "MDS with Excess Blasts",
+      "sample_count": 92,
+      "prior_probability": 0.00040562048912540287
+    },
+    {
+      "class_name": "Dysembryoplastic Neuroepithelial Tumor",
+      "sample_count": 91,
+      "prior_probability": 0.0004012115707653441
+    },
+    {
+      "class_name": "Bladder Squamous Cell Carcinoma",
+      "sample_count": 90,
+      "prior_probability": 0.0003968026524052854
+    },
+    {
+      "class_name": "Anaplastic Meningioma",
+      "sample_count": 89,
+      "prior_probability": 0.00039239373404522667
+    },
+    {
+      "class_name": "Mixed Phenotype Acute Leukemia, B/Myeloid, NOS",
+      "sample_count": 89,
+      "prior_probability": 0.00039239373404522667
+    },
+    {
+      "class_name": "Atypical Teratoid/Rhabdoid Tumor",
+      "sample_count": 88,
+      "prior_probability": 0.000387984815685168
+    },
+    {
+      "class_name": "Extranodal Marginal Zone Lymphoma of Mucosa-Associated Lymphoid Tissue (MALT lymphoma)",
+      "sample_count": 88,
+      "prior_probability": 0.000387984815685168
+    },
+    {
+      "class_name": "Serous Borderline Ovarian Tumor",
+      "sample_count": 88,
+      "prior_probability": 0.000387984815685168
+    },
+    {
+      "class_name": "Uterine Sarcoma/Mesenchymal",
+      "sample_count": 85,
+      "prior_probability": 0.0003747580606049918
+    },
+    {
+      "class_name": "Epithelioid Sarcoma",
+      "sample_count": 85,
+      "prior_probability": 0.0003747580606049918
+    },
+    {
+      "class_name": "Uterine Adenosarcoma",
+      "sample_count": 84,
+      "prior_probability": 0.000370349142244933
+    },
+    {
+      "class_name": "Paraganglioma",
+      "sample_count": 84,
+      "prior_probability": 0.000370349142244933
+    },
+    {
+      "class_name": "Adult T-Cell Leukemia/Lymphoma",
+      "sample_count": 83,
+      "prior_probability": 0.0003659402238848743
+    },
+    {
+      "class_name": "Undifferentiated Carcinoma of the Pancreas",
+      "sample_count": 82,
+      "prior_probability": 0.0003615313055248156
+    },
+    {
+      "class_name": "Primary DLBCL of the central nervous system",
+      "sample_count": 80,
+      "prior_probability": 0.00035271346880469813
+    },
+    {
+      "class_name": "Non-Seminomatous Germ Cell Tumor",
+      "sample_count": 79,
+      "prior_probability": 0.00034830455044463943
+    },
+    {
+      "class_name": "Penile Squamous Cell Carcinoma",
+      "sample_count": 79,
+      "prior_probability": 0.00034830455044463943
+    },
+    {
+      "class_name": "Chronic Myelomonocytic Leukemia-1",
+      "sample_count": 78,
+      "prior_probability": 0.0003438956320845807
+    },
+    {
+      "class_name": "T-Cell Prolymphocytic Leukemia",
+      "sample_count": 77,
+      "prior_probability": 0.000339486713724522
+    },
+    {
+      "class_name": "Breast Ductal Carcinoma In Situ",
+      "sample_count": 77,
+      "prior_probability": 0.000339486713724522
+    },
+    {
+      "class_name": "Round Cell Sarcoma, NOS",
+      "sample_count": 77,
+      "prior_probability": 0.000339486713724522
+    },
+    {
+      "class_name": "Pleomorphic Liposarcoma",
+      "sample_count": 75,
+      "prior_probability": 0.00033066887700440454
+    },
+    {
+      "class_name": "Craniopharyngioma, Adamantinomatous Type",
+      "sample_count": 75,
+      "prior_probability": 0.00033066887700440454
+    },
+    {
+      "class_name": "Sarcomatoid Carcinoma of the Urinary Bladder",
+      "sample_count": 74,
+      "prior_probability": 0.0003262599586443458
+    },
+    {
+      "class_name": "Ganglioneuroblastoma",
+      "sample_count": 74,
+      "prior_probability": 0.0003262599586443458
+    },
+    {
+      "class_name": "Hepatocellular Carcinoma plus Intrahepatic Cholangiocarcinoma",
+      "sample_count": 74,
+      "prior_probability": 0.0003262599586443458
+    },
+    {
+      "class_name": "Pheochromocytoma",
+      "sample_count": 73,
+      "prior_probability": 0.00032185104028428703
+    },
+    {
+      "class_name": "Non-Hodgkin Lymphoma",
+      "sample_count": 72,
+      "prior_probability": 0.00031744212192422834
+    },
+    {
+      "class_name": "Liposarcoma",
+      "sample_count": 72,
+      "prior_probability": 0.00031744212192422834
+    },
+    {
+      "class_name": "Renal Oncocytoma",
+      "sample_count": 72,
+      "prior_probability": 0.00031744212192422834
+    },
+    {
+      "class_name": "Osteoblastic Osteosarcoma",
+      "sample_count": 71,
+      "prior_probability": 0.0003130332035641696
+    },
+    {
+      "class_name": "Ocular Melanoma",
+      "sample_count": 71,
+      "prior_probability": 0.0003130332035641696
+    },
+    {
+      "class_name": "Breast Angiosarcoma",
+      "sample_count": 71,
+      "prior_probability": 0.0003130332035641696
+    },
+    {
+      "class_name": "Inflammatory Myofibroblastic Tumor",
+      "sample_count": 70,
+      "prior_probability": 0.0003086242852041109
+    },
+    {
+      "class_name": "APL with PML-RARA",
+      "sample_count": 70,
+      "prior_probability": 0.0003086242852041109
+    },
+    {
+      "class_name": "Clear Cell Sarcoma",
+      "sample_count": 70,
+      "prior_probability": 0.0003086242852041109
+    },
+    {
+      "class_name": "Sinonasal Squamous Cell Carcinoma",
+      "sample_count": 69,
+      "prior_probability": 0.00030421536684405214
+    },
+    {
+      "class_name": "Sex Cord Stromal Tumor",
+      "sample_count": 69,
+      "prior_probability": 0.00030421536684405214
+    },
+    {
+      "class_name": "MDS with Ring Sideroblasts and Multilineage Dysplasia",
+      "sample_count": 68,
+      "prior_probability": 0.00029980644848399344
+    },
+    {
+      "class_name": "Pleomorphic Xanthoastrocytoma",
+      "sample_count": 68,
+      "prior_probability": 0.00029980644848399344
+    },
+    {
+      "class_name": "Mucoepidermoid Carcinoma",
+      "sample_count": 68,
+      "prior_probability": 0.00029980644848399344
+    },
+    {
+      "class_name": "Anaplastic Large Cell Lymphoma",
+      "sample_count": 68,
+      "prior_probability": 0.00029980644848399344
+    },
+    {
+      "class_name": "Activated B-cell Type",
+      "sample_count": 66,
+      "prior_probability": 0.000290988611763876
+    },
+    {
+      "class_name": "Intestinal Type Stomach Adenocarcinoma",
+      "sample_count": 65,
+      "prior_probability": 0.00028657969340381724
+    },
+    {
+      "class_name": "Immature Teratoma",
+      "sample_count": 64,
+      "prior_probability": 0.0002821707750437585
+    },
+    {
+      "class_name": "Desmoplastic Melanoma",
+      "sample_count": 64,
+      "prior_probability": 0.0002821707750437585
+    },
+    {
+      "class_name": "Acute Monoblastic/Monocytic Leukemia",
+      "sample_count": 64,
+      "prior_probability": 0.0002821707750437585
+    },
+    {
+      "class_name": "Embryonal Carcinoma",
+      "sample_count": 63,
+      "prior_probability": 0.0002777618566836998
+    },
+    {
+      "class_name": "Hemangioblastoma",
+      "sample_count": 63,
+      "prior_probability": 0.0002777618566836998
+    },
+    {
+      "class_name": "Germinal Center B-Cell Type",
+      "sample_count": 63,
+      "prior_probability": 0.0002777618566836998
+    },
+    {
+      "class_name": "Head and Neck Carcinoma, Other",
+      "sample_count": 63,
+      "prior_probability": 0.0002777618566836998
+    },
+    {
+      "class_name": "Monoclonal B-Cell Lymphocytosis",
+      "sample_count": 62,
+      "prior_probability": 0.00027335293832364104
+    },
+    {
+      "class_name": "Endometrial Stromal Sarcoma",
+      "sample_count": 62,
+      "prior_probability": 0.00027335293832364104
+    },
+    {
+      "class_name": "High-Grade B-Cell Lymphoma, with MYC and BCL2 and/or BCL6 Rearrangements",
+      "sample_count": 61,
+      "prior_probability": 0.00026894401996358235
+    },
+    {
+      "class_name": "Pineoblastoma",
+      "sample_count": 61,
+      "prior_probability": 0.00026894401996358235
+    },
+    {
+      "class_name": "High-Grade Neuroepithelial Tumor",
+      "sample_count": 60,
+      "prior_probability": 0.0002645351016035236
+    },
+    {
+      "class_name": "Pancreas",
+      "sample_count": 60,
+      "prior_probability": 0.0002645351016035236
+    },
+    {
+      "class_name": "Chronic Myelomonocytic Leukemia-0",
+      "sample_count": 59,
+      "prior_probability": 0.0002601261832434649
+    },
+    {
+      "class_name": "Fibrolamellar Carcinoma",
+      "sample_count": 58,
+      "prior_probability": 0.00025571726488340615
+    },
+    {
+      "class_name": "Acinic Cell Carcinoma",
+      "sample_count": 58,
+      "prior_probability": 0.00025571726488340615
+    },
+    {
+      "class_name": "Embryonal Tumor",
+      "sample_count": 56,
+      "prior_probability": 0.0002468994281632887
+    },
+    {
+      "class_name": "AML with t(9;11)(p21.3;q23.3);MLLT3-KMT2A",
+      "sample_count": 56,
+      "prior_probability": 0.0002468994281632887
+    },
+    {
+      "class_name": "Perihilar Cholangiocarcinoma",
+      "sample_count": 56,
+      "prior_probability": 0.0002468994281632887
+    },
+    {
+      "class_name": "AML with Maturation",
+      "sample_count": 55,
+      "prior_probability": 0.00024249050980322998
+    },
+    {
+      "class_name": "Primary Mediastinal (Thymic) Large B-Cell Lymphoma",
+      "sample_count": 54,
+      "prior_probability": 0.00023808159144317125
+    },
+    {
+      "class_name": "Choriocarcinoma",
+      "sample_count": 54,
+      "prior_probability": 0.00023808159144317125
+    },
+    {
+      "class_name": "Sertoli-Leydig Cell Tumor",
+      "sample_count": 54,
+      "prior_probability": 0.00023808159144317125
+    },
+    {
+      "class_name": "AML with inv(3)(q21.3q26.2) or t(3;3)(q21.3;q26.2); GATA2, MECOM",
+      "sample_count": 53,
+      "prior_probability": 0.00023367267308311253
+    },
+    {
+      "class_name": "Low-Grade Endometrial Stromal Sarcoma",
+      "sample_count": 53,
+      "prior_probability": 0.00023367267308311253
+    },
+    {
+      "class_name": "Systemic Mastocytosis with an Associated Hematological Neoplasm",
+      "sample_count": 52,
+      "prior_probability": 0.0002292637547230538
+    },
+    {
+      "class_name": "Uterine Sarcoma, Other",
+      "sample_count": 52,
+      "prior_probability": 0.0002292637547230538
+    },
+    {
+      "class_name": "Cervical Adenosquamous Carcinoma",
+      "sample_count": 52,
+      "prior_probability": 0.0002292637547230538
+    },
+    {
+      "class_name": "Burkitt Lymphoma",
+      "sample_count": 51,
+      "prior_probability": 0.00022485483636299505
+    },
+    {
+      "class_name": "Translocation-Associated Renal Cell Carcinoma",
+      "sample_count": 51,
+      "prior_probability": 0.00022485483636299505
+    },
+    {
+      "class_name": "Well-Differentiated Neuroendocrine Tumor of the Rectum",
+      "sample_count": 51,
+      "prior_probability": 0.00022485483636299505
+    },
+    {
+      "class_name": "Pleural Mesothelioma, Sarcomatoid Type",
+      "sample_count": 51,
+      "prior_probability": 0.00022485483636299505
+    },
+    {
+      "class_name": "Mature Teratoma",
+      "sample_count": 51,
+      "prior_probability": 0.00022485483636299505
+    },
+    {
+      "class_name": "Ewing Sarcoma of Soft Tissue",
+      "sample_count": 51,
+      "prior_probability": 0.00022485483636299505
+    },
+    {
+      "class_name": "Malignant Phyllodes Tumor of the Breast",
+      "sample_count": 50,
+      "prior_probability": 0.00022044591800293633
+    },
+    {
+      "class_name": "Monoclonal Gammopathy of Undetermined Significance",
+      "sample_count": 50,
+      "prior_probability": 0.00022044591800293633
+    },
+    {
+      "class_name": "Alveolar Soft Part Sarcoma",
+      "sample_count": 50,
+      "prior_probability": 0.00022044591800293633
+    },
+    {
+      "class_name": "Renal Clear Cell Carcinoma with Sarcomatoid Features",
+      "sample_count": 50,
+      "prior_probability": 0.00022044591800293633
+    },
+    {
+      "class_name": "Splenic Marginal Zone Lymphoma",
+      "sample_count": 50,
+      "prior_probability": 0.00022044591800293633
+    },
+    {
+      "class_name": "Uterine Undifferentiated Carcinoma",
+      "sample_count": 49,
+      "prior_probability": 0.0002160369996428776
+    },
+    {
+      "class_name": "Intraductal Papillary Mucinous Neoplasm",
+      "sample_count": 49,
+      "prior_probability": 0.0002160369996428776
+    },
+    {
+      "class_name": "Well-Differentiated Thyroid Cancer",
+      "sample_count": 49,
+      "prior_probability": 0.0002160369996428776
+    },
+    {
+      "class_name": "Gastric Type Mucinous Carcinoma",
+      "sample_count": 49,
+      "prior_probability": 0.0002160369996428776
+    },
+    {
+      "class_name": "Systemic Mastocytosis",
+      "sample_count": 49,
+      "prior_probability": 0.0002160369996428776
+    },
+    {
+      "class_name": "Miscellaneous Neuroepithelial Tumor",
+      "sample_count": 49,
+      "prior_probability": 0.0002160369996428776
+    },
+    {
+      "class_name": "Salivary Carcinoma, Other",
+      "sample_count": 49,
+      "prior_probability": 0.0002160369996428776
+    },
+    {
+      "class_name": "Dermatofibrosarcoma Protuberans",
+      "sample_count": 48,
+      "prior_probability": 0.00021162808128281888
+    },
+    {
+      "class_name": "Miscellaneous Brain Tumor",
+      "sample_count": 48,
+      "prior_probability": 0.00021162808128281888
+    },
+    {
+      "class_name": "Salivary Adenocarcinoma",
+      "sample_count": 48,
+      "prior_probability": 0.00021162808128281888
+    },
+    {
+      "class_name": "Large Cell Lung Carcinoma",
+      "sample_count": 47,
+      "prior_probability": 0.00020721916292276016
+    },
+    {
+      "class_name": "AML with Mutated RUNX1",
+      "sample_count": 47,
+      "prior_probability": 0.00020721916292276016
+    },
+    {
+      "class_name": "Chronic Myelomonocytic Leukemia-2",
+      "sample_count": 47,
+      "prior_probability": 0.00020721916292276016
+    },
+    {
+      "class_name": "Sarcomatoid Renal Cell Carcinoma",
+      "sample_count": 47,
+      "prior_probability": 0.00020721916292276016
+    },
+    {
+      "class_name": "Renal Non-Clear Cell Carcinoma",
+      "sample_count": 46,
+      "prior_probability": 0.00020281024456270143
+    },
+    {
+      "class_name": "Uterine Dedifferentiated Carcinoma",
+      "sample_count": 46,
+      "prior_probability": 0.00020281024456270143
+    },
+    {
+      "class_name": "Olfactory Neuroblastoma",
+      "sample_count": 45,
+      "prior_probability": 0.0001984013262026427
+    },
+    {
+      "class_name": "Teratoma",
+      "sample_count": 45,
+      "prior_probability": 0.0001984013262026427
+    },
+    {
+      "class_name": "MDS with Isolated Del(5q)",
+      "sample_count": 45,
+      "prior_probability": 0.0001984013262026427
+    },
+    {
+      "class_name": "Anaplastic Oligoastrocytoma",
+      "sample_count": 45,
+      "prior_probability": 0.0001984013262026427
+    },
+    {
+      "class_name": "Myoepithelial Carcinoma",
+      "sample_count": 45,
+      "prior_probability": 0.0001984013262026427
+    },
+    {
+      "class_name": "Sebaceous Carcinoma",
+      "sample_count": 44,
+      "prior_probability": 0.000193992407842584
+    },
+    {
+      "class_name": "Myxopapillary Ependymoma",
+      "sample_count": 44,
+      "prior_probability": 0.000193992407842584
+    },
+    {
+      "class_name": "Anaplastic Pleomorphic Xanthoastrocytoma",
+      "sample_count": 43,
+      "prior_probability": 0.00018958348948252526
+    },
+    {
+      "class_name": "Waldenstrom Macroglobulinemia",
+      "sample_count": 43,
+      "prior_probability": 0.00018958348948252526
+    },
+    {
+      "class_name": "Choroid Plexus Papilloma",
+      "sample_count": 43,
+      "prior_probability": 0.00018958348948252526
+    },
+    {
+      "class_name": "Blastic Plasmacytoid Dendritic Cell Neoplasm",
+      "sample_count": 42,
+      "prior_probability": 0.0001851745711224665
+    },
+    {
+      "class_name": "Skin Adnexal Carcinoma",
+      "sample_count": 42,
+      "prior_probability": 0.0001851745711224665
+    },
+    {
+      "class_name": "Head and Neck Squamous Cell Carcinoma of Unknown Primary",
+      "sample_count": 42,
+      "prior_probability": 0.0001851745711224665
+    },
+    {
+      "class_name": "Tubular Stomach Adenocarcinoma",
+      "sample_count": 42,
+      "prior_probability": 0.0001851745711224665
+    },
+    {
+      "class_name": "Hypopharynx Squamous Cell Carcinoma",
+      "sample_count": 41,
+      "prior_probability": 0.0001807656527624078
+    },
+    {
+      "class_name": "Germinoma",
+      "sample_count": 40,
+      "prior_probability": 0.00017635673440234906
+    },
+    {
+      "class_name": "Pancreatic Neuroendocrine Carcinoma",
+      "sample_count": 40,
+      "prior_probability": 0.00017635673440234906
+    },
+    {
+      "class_name": "Dedifferentiated Chondrosarcoma",
+      "sample_count": 40,
+      "prior_probability": 0.00017635673440234906
+    },
+    {
+      "class_name": "AML without Maturation",
+      "sample_count": 40,
+      "prior_probability": 0.00017635673440234906
+    },
+    {
+      "class_name": "Cervical Clear Cell Carcinoma",
+      "sample_count": 39,
+      "prior_probability": 0.00017194781604229034
+    },
+    {
+      "class_name": "Radiation-Associated Sarcoma",
+      "sample_count": 39,
+      "prior_probability": 0.00017194781604229034
+    },
+    {
+      "class_name": "AML with t(6;9)(p23;q34.1);DEK-NUP214",
+      "sample_count": 39,
+      "prior_probability": 0.00017194781604229034
+    },
+    {
+      "class_name": "MDS with Ring Sideroblasts",
+      "sample_count": 39,
+      "prior_probability": 0.00017194781604229034
+    },
+    {
+      "class_name": "Other",
+      "sample_count": 38,
+      "prior_probability": 0.00016753889768223162
+    },
+    {
+      "class_name": "Renal Angiomyolipoma",
+      "sample_count": 38,
+      "prior_probability": 0.00016753889768223162
+    },
+    {
+      "class_name": "Rosette-forming Glioneuronal Tumor of the Fourth Ventricle",
+      "sample_count": 38,
+      "prior_probability": 0.00016753889768223162
+    },
+    {
+      "class_name": "MDS/MPN with Ring Sideroblasts and Thrombocytosis",
+      "sample_count": 38,
+      "prior_probability": 0.00016753889768223162
+    },
+    {
+      "class_name": "Germ Cell Tumor with Somatic-Type Malignancy",
+      "sample_count": 38,
+      "prior_probability": 0.00016753889768223162
+    },
+    {
+      "class_name": "High-Grade Endometrial Stromal Sarcoma",
+      "sample_count": 38,
+      "prior_probability": 0.00016753889768223162
+    },
+    {
+      "class_name": "Breast Invasive Mixed Mucinous Carcinoma",
+      "sample_count": 38,
+      "prior_probability": 0.00016753889768223162
+    },
+    {
+      "class_name": "Mucinous Borderline Ovarian Tumor",
+      "sample_count": 38,
+      "prior_probability": 0.00016753889768223162
+    },
+    {
+      "class_name": "Signet Ring Cell Type of the Appendix",
+      "sample_count": 38,
+      "prior_probability": 0.00016753889768223162
+    },
+    {
+      "class_name": "Parathyroid Carcinoma",
+      "sample_count": 37,
+      "prior_probability": 0.0001631299793221729
+    },
+    {
+      "class_name": "Intimal Sarcoma",
+      "sample_count": 37,
+      "prior_probability": 0.0001631299793221729
+    },
+    {
+      "class_name": "Extra Gonadal Germ Cell Tumor",
+      "sample_count": 37,
+      "prior_probability": 0.0001631299793221729
+    },
+    {
+      "class_name": "Solid Pseudopapillary Neoplasm of the Pancreas",
+      "sample_count": 36,
+      "prior_probability": 0.00015872106096211417
+    },
+    {
+      "class_name": "Atypical Lipomatous Tumor",
+      "sample_count": 36,
+      "prior_probability": 0.00015872106096211417
+    },
+    {
+      "class_name": "Well-Differentiated Neuroendocrine Tumor of the Appendix",
+      "sample_count": 35,
+      "prior_probability": 0.00015431214260205544
+    },
+    {
+      "class_name": "Adrenocortical Adenoma",
+      "sample_count": 35,
+      "prior_probability": 0.00015431214260205544
+    },
+    {
+      "class_name": "AML with Recurrent Genetic Abnormalities",
+      "sample_count": 35,
+      "prior_probability": 0.00015431214260205544
+    },
+    {
+      "class_name": "Ovary/Fallopian Tube",
+      "sample_count": 35,
+      "prior_probability": 0.00015431214260205544
+    },
+    {
+      "class_name": "Poorly Differentiated Carcinoma of the Uterus",
+      "sample_count": 35,
+      "prior_probability": 0.00015431214260205544
+    },
+    {
+      "class_name": "Anaplastic Large-Cell Lymphoma ALK Negative",
+      "sample_count": 34,
+      "prior_probability": 0.00014990322424199672
+    },
+    {
+      "class_name": "Medulloblastoma, Non-WNT, Non-SHH",
+      "sample_count": 34,
+      "prior_probability": 0.00014990322424199672
+    },
+    {
+      "class_name": "High-Grade B-Cell Lymphoma, NOS",
+      "sample_count": 34,
+      "prior_probability": 0.00014990322424199672
+    },
+    {
+      "class_name": "Small Cell Carcinoma of the Ovary",
+      "sample_count": 34,
+      "prior_probability": 0.00014990322424199672
+    },
+    {
+      "class_name": "MDS with Single Lineage Dysplasia",
+      "sample_count": 34,
+      "prior_probability": 0.00014990322424199672
+    },
+    {
+      "class_name": "Intestinal Ampullary Carcinoma",
+      "sample_count": 34,
+      "prior_probability": 0.00014990322424199672
+    },
+    {
+      "class_name": "EBV Positive DLBCL, NOS",
+      "sample_count": 34,
+      "prior_probability": 0.00014990322424199672
+    },
+    {
+      "class_name": "Head and Neck Neuroendocrine Carcinoma",
+      "sample_count": 34,
+      "prior_probability": 0.00014990322424199672
+    },
+    {
+      "class_name": "Myeloproliferative Neoplasms, Unclassifiable",
+      "sample_count": 34,
+      "prior_probability": 0.00014990322424199672
+    },
+    {
+      "class_name": "Low-Grade Fibromyxoid Sarcoma",
+      "sample_count": 34,
+      "prior_probability": 0.00014990322424199672
+    },
+    {
+      "class_name": "Hepatocellular Adenoma",
+      "sample_count": 33,
+      "prior_probability": 0.000145494305881938
+    },
+    {
+      "class_name": "Mixed Phenotype Acute Leukemia with t(9;22)(q34.1;q11.2); BCR-ABL1",
+      "sample_count": 33,
+      "prior_probability": 0.000145494305881938
+    },
+    {
+      "class_name": "AML with Biallelic Mutations of CEBPA",
+      "sample_count": 33,
+      "prior_probability": 0.000145494305881938
+    },
+    {
+      "class_name": "Lentigo Maligna Melanoma",
+      "sample_count": 33,
+      "prior_probability": 0.000145494305881938
+    },
+    {
+      "class_name": "Histiocytic Sarcoma",
+      "sample_count": 33,
+      "prior_probability": 0.000145494305881938
+    },
+    {
+      "class_name": "Plasmacytoid/Signet Ring Cell Bladder Carcinoma",
+      "sample_count": 33,
+      "prior_probability": 0.000145494305881938
+    },
+    {
+      "class_name": "Uterine Perivascular Epithelioid Cell Tumor",
+      "sample_count": 33,
+      "prior_probability": 0.000145494305881938
+    },
+    {
+      "class_name": "Low-grade Appendiceal Mucinous Neoplasm",
+      "sample_count": 32,
+      "prior_probability": 0.00014108538752187925
+    },
+    {
+      "class_name": "Conjunctival Melanoma",
+      "sample_count": 32,
+      "prior_probability": 0.00014108538752187925
+    },
+    {
+      "class_name": "Myeloid Sarcoma",
+      "sample_count": 32,
+      "prior_probability": 0.00014108538752187925
+    },
+    {
+      "class_name": "Sinonasal Undifferentiated Carcinoma",
+      "sample_count": 32,
+      "prior_probability": 0.00014108538752187925
+    },
+    {
+      "class_name": "Medullary Carcinoma of the Colon",
+      "sample_count": 32,
+      "prior_probability": 0.00014108538752187925
+    },
+    {
+      "class_name": "Pleomorphic Rhabdomyosarcoma",
+      "sample_count": 32,
+      "prior_probability": 0.00014108538752187925
+    },
+    {
+      "class_name": "Breast Lobular Carcinoma In Situ",
+      "sample_count": 31,
+      "prior_probability": 0.00013667646916182052
+    },
+    {
+      "class_name": "Giant Cell Tumor of Bone",
+      "sample_count": 31,
+      "prior_probability": 0.00013667646916182052
+    },
+    {
+      "class_name": "Lung Adenocarcinoma In Situ",
+      "sample_count": 31,
+      "prior_probability": 0.00013667646916182052
+    },
+    {
+      "class_name": "Adenoid Cystic Breast Cancer",
+      "sample_count": 31,
+      "prior_probability": 0.00013667646916182052
+    },
+    {
+      "class_name": "Small Cell Carcinoma of the Cervix",
+      "sample_count": 31,
+      "prior_probability": 0.00013667646916182052
+    },
+    {
+      "class_name": "Chondroblastic Osteosarcoma",
+      "sample_count": 31,
+      "prior_probability": 0.00013667646916182052
+    },
+    {
+      "class_name": "Follicular Dendritic Cell Sarcoma",
+      "sample_count": 31,
+      "prior_probability": 0.00013667646916182052
+    },
+    {
+      "class_name": "Low-Grade Neuroepithelial Tumor",
+      "sample_count": 31,
+      "prior_probability": 0.00013667646916182052
+    },
+    {
+      "class_name": "Urachal Adenocarcinoma",
+      "sample_count": 31,
+      "prior_probability": 0.00013667646916182052
+    },
+    {
+      "class_name": "Extranodal NK-/T-Cell Lymphoma, Nasal Type",
+      "sample_count": 30,
+      "prior_probability": 0.0001322675508017618
+    },
+    {
+      "class_name": "Sclerosing Epithelioid Fibrosarcoma",
+      "sample_count": 30,
+      "prior_probability": 0.0001322675508017618
+    },
+    {
+      "class_name": "Acute Leukemias of Ambiguous Lineage",
+      "sample_count": 30,
+      "prior_probability": 0.0001322675508017618
+    },
+    {
+      "class_name": "MDS with Ring Sideroblasts and Single Lineage Dysplasia",
+      "sample_count": 30,
+      "prior_probability": 0.0001322675508017618
+    },
+    {
+      "class_name": "Serous Borderline Ovarian Tumor, Micropapillary",
+      "sample_count": 29,
+      "prior_probability": 0.00012785863244170307
+    },
+    {
+      "class_name": "Dysgerminoma",
+      "sample_count": 29,
+      "prior_probability": 0.00012785863244170307
+    },
+    {
+      "class_name": "Encapsulated Glioma",
+      "sample_count": 29,
+      "prior_probability": 0.00012785863244170307
+    },
+    {
+      "class_name": "Extraskeletal Myxoid Chondrosarcoma",
+      "sample_count": 28,
+      "prior_probability": 0.00012344971408164435
+    },
+    {
+      "class_name": "Primitive Neuroectodermal Tumor",
+      "sample_count": 28,
+      "prior_probability": 0.00012344971408164435
+    },
+    {
+      "class_name": "Mammary Analogue Secretory Carcinoma of Salivary Gland Origin",
+      "sample_count": 28,
+      "prior_probability": 0.00012344971408164435
+    },
+    {
+      "class_name": "Adenoid Cystic Carcinoma of the Lung",
+      "sample_count": 28,
+      "prior_probability": 0.00012344971408164435
+    },
+    {
+      "class_name": "Soft Tissue Myoepithelial Carcinoma",
+      "sample_count": 28,
+      "prior_probability": 0.00012344971408164435
+    },
+    {
+      "class_name": "Juvenile Myelomonocytic Leukemia",
+      "sample_count": 27,
+      "prior_probability": 0.00011904079572158563
+    },
+    {
+      "class_name": "Oligoastrocytoma",
+      "sample_count": 27,
+      "prior_probability": 0.00011904079572158563
+    },
+    {
+      "class_name": "Subependymoma",
+      "sample_count": 27,
+      "prior_probability": 0.00011904079572158563
+    },
+    {
+      "class_name": "Nerve Sheath Tumor",
+      "sample_count": 27,
+      "prior_probability": 0.00011904079572158563
+    },
+    {
+      "class_name": "Pilomyxoid Astrocytoma",
+      "sample_count": 27,
+      "prior_probability": 0.00011904079572158563
+    },
+    {
+      "class_name": "Uterine Neuroendocrine Carcinoma",
+      "sample_count": 27,
+      "prior_probability": 0.00011904079572158563
+    },
+    {
+      "class_name": "Undifferentiated Uterine Sarcoma",
+      "sample_count": 27,
+      "prior_probability": 0.00011904079572158563
+    },
+    {
+      "class_name": "Uterine Leiomyoma",
+      "sample_count": 27,
+      "prior_probability": 0.00011904079572158563
+    },
+    {
+      "class_name": "Hodgkin Lymphoma",
+      "sample_count": 26,
+      "prior_probability": 0.0001146318773615269
+    },
+    {
+      "class_name": "Nodular Lymphocyte-Predominant Hodgkin Lymphoma",
+      "sample_count": 26,
+      "prior_probability": 0.0001146318773615269
+    },
+    {
+      "class_name": "Tenosynovial Giant Cell Tumor Diffuse Type",
+      "sample_count": 26,
+      "prior_probability": 0.0001146318773615269
+    },
+    {
+      "class_name": "Solitary Fibrous Tumor of the Central Nervous System",
+      "sample_count": 26,
+      "prior_probability": 0.0001146318773615269
+    },
+    {
+      "class_name": "Urethral Adenocarcinoma",
+      "sample_count": 26,
+      "prior_probability": 0.0001146318773615269
+    },
+    {
+      "class_name": "Myxoma",
+      "sample_count": 26,
+      "prior_probability": 0.0001146318773615269
+    },
+    {
+      "class_name": "Choroid Plexus Carcinoma",
+      "sample_count": 26,
+      "prior_probability": 0.0001146318773615269
+    },
+    {
+      "class_name": "Clear Cell Papillary Renal Cell Carcinoma",
+      "sample_count": 26,
+      "prior_probability": 0.0001146318773615269
+    },
+    {
+      "class_name": "Other Uterine Tumor",
+      "sample_count": 26,
+      "prior_probability": 0.0001146318773615269
+    },
+    {
+      "class_name": "FH-Deficient Renal Cell Carcinoma",
+      "sample_count": 26,
+      "prior_probability": 0.0001146318773615269
+    },
+    {
+      "class_name": "Urethral Squamous Cell Carcinoma",
+      "sample_count": 26,
+      "prior_probability": 0.0001146318773615269
+    },
+    {
+      "class_name": "Uterine Mesonephric Carcinoma",
+      "sample_count": 25,
+      "prior_probability": 0.00011022295900146817
+    },
+    {
+      "class_name": "Mesenchymal Chondrosarcoma",
+      "sample_count": 25,
+      "prior_probability": 0.00011022295900146817
+    },
+    {
+      "class_name": "Malignant Tumor",
+      "sample_count": 25,
+      "prior_probability": 0.00011022295900146817
+    },
+    {
+      "class_name": "Cervical Neuroendocrine Tumor",
+      "sample_count": 25,
+      "prior_probability": 0.00011022295900146817
+    },
+    {
+      "class_name": "Spindle Cell Rhabdomyosarcoma",
+      "sample_count": 24,
+      "prior_probability": 0.00010581404064140944
+    },
+    {
+      "class_name": "Mucinous Carcinoma",
+      "sample_count": 24,
+      "prior_probability": 0.00010581404064140944
+    },
+    {
+      "class_name": "Adenosquamous Carcinoma of the Gallbladder",
+      "sample_count": 24,
+      "prior_probability": 0.00010581404064140944
+    },
+    {
+      "class_name": "Collecting Duct Renal Cell Carcinoma",
+      "sample_count": 24,
+      "prior_probability": 0.00010581404064140944
+    },
+    {
+      "class_name": "NUT Midline Carcinoma of the Head and Neck",
+      "sample_count": 24,
+      "prior_probability": 0.00010581404064140944
+    },
+    {
+      "class_name": "Malignant Lymphoma",
+      "sample_count": 24,
+      "prior_probability": 0.00010581404064140944
+    },
+    {
+      "class_name": "Renal Medullary Carcinoma",
+      "sample_count": 23,
+      "prior_probability": 0.00010140512228135072
+    },
+    {
+      "class_name": "Cervical Serous Carcinoma",
+      "sample_count": 23,
+      "prior_probability": 0.00010140512228135072
+    },
+    {
+      "class_name": "Soft Tissue",
+      "sample_count": 23,
+      "prior_probability": 0.00010140512228135072
+    },
+    {
+      "class_name": "B-Lymphoblastic Leukemia/Lymphoma, BCR-ABL1 Like",
+      "sample_count": 22,
+      "prior_probability": 9.6996203921292e-05
+    },
+    {
+      "class_name": "Nodular Sclerosis Classical Hodgkin Lymphoma",
+      "sample_count": 22,
+      "prior_probability": 9.6996203921292e-05
+    },
+    {
+      "class_name": "T-Cell/Histiocyte-Rich Large B-Cell Lymphoma",
+      "sample_count": 22,
+      "prior_probability": 9.6996203921292e-05
+    },
+    {
+      "class_name": "Angiomatoid Fibrous Histiocytoma",
+      "sample_count": 22,
+      "prior_probability": 9.6996203921292e-05
+    },
+    {
+      "class_name": "Anaplastic Large-Cell Lymphoma ALK Positive",
+      "sample_count": 22,
+      "prior_probability": 9.6996203921292e-05
+    },
+    {
+      "class_name": "Sezary Syndrome",
+      "sample_count": 22,
+      "prior_probability": 9.6996203921292e-05
+    },
+    {
+      "class_name": "Thymic Neuroendocrine Tumor",
+      "sample_count": 22,
+      "prior_probability": 9.6996203921292e-05
+    },
+    {
+      "class_name": "Fibrosarcoma",
+      "sample_count": 22,
+      "prior_probability": 9.6996203921292e-05
+    },
+    {
+      "class_name": "Myofibroma",
+      "sample_count": 22,
+      "prior_probability": 9.6996203921292e-05
+    },
+    {
+      "class_name": "Sinonasal Adenocarcinoma",
+      "sample_count": 22,
+      "prior_probability": 9.6996203921292e-05
+    },
+    {
+      "class_name": "Cystic Tumor of the Pancreas",
+      "sample_count": 21,
+      "prior_probability": 9.258728556123326e-05
+    },
+    {
+      "class_name": "Acute Myelomonocytic Leukemia",
+      "sample_count": 21,
+      "prior_probability": 9.258728556123326e-05
+    },
+    {
+      "class_name": "B-Lymphoblastic Leukemia/Lymphoma with t(v;11q23.3);KMT2A Rearranged",
+      "sample_count": 21,
+      "prior_probability": 9.258728556123326e-05
+    },
+    {
+      "class_name": "Anal Gland Adenocarcinoma",
+      "sample_count": 21,
+      "prior_probability": 9.258728556123326e-05
+    },
+    {
+      "class_name": "Spitzoid Melanoma",
+      "sample_count": 21,
+      "prior_probability": 9.258728556123326e-05
+    },
+    {
+      "class_name": "Central Neurocytoma",
+      "sample_count": 21,
+      "prior_probability": 9.258728556123326e-05
+    },
+    {
+      "class_name": "Uterine Smooth Muscle Tumor of Uncertain Malignant Potential",
+      "sample_count": 20,
+      "prior_probability": 8.817836720117453e-05
+    },
+    {
+      "class_name": "Uterine Myxoid Leiomyosarcoma",
+      "sample_count": 20,
+      "prior_probability": 8.817836720117453e-05
+    },
+    {
+      "class_name": "Vaginal Adenocarcinoma",
+      "sample_count": 20,
+      "prior_probability": 8.817836720117453e-05
+    },
+    {
+      "class_name": "Desmoplastic/Nodular Medulloblastoma",
+      "sample_count": 20,
+      "prior_probability": 8.817836720117453e-05
+    },
+    {
+      "class_name": "Breast Fibroepithelial Neoplasms",
+      "sample_count": 20,
+      "prior_probability": 8.817836720117453e-05
+    },
+    {
+      "class_name": "Medulloblastoma, SHH Subtype",
+      "sample_count": 20,
+      "prior_probability": 8.817836720117453e-05
+    },
+    {
+      "class_name": "Early T-Cell Precursor Lymphoblastic Leukemia",
+      "sample_count": 20,
+      "prior_probability": 8.817836720117453e-05
+    },
+    {
+      "class_name": "Spindle Cell Carcinoma of the Lung",
+      "sample_count": 20,
+      "prior_probability": 8.817836720117453e-05
+    },
+    {
+      "class_name": "Cervical Endometrioid Carcinoma",
+      "sample_count": 19,
+      "prior_probability": 8.376944884111581e-05
+    },
+    {
+      "class_name": "Congenital Nevus",
+      "sample_count": 19,
+      "prior_probability": 8.376944884111581e-05
+    },
+    {
+      "class_name": "Angiocentric Glioma",
+      "sample_count": 19,
+      "prior_probability": 8.376944884111581e-05
+    },
+    {
+      "class_name": "Rhabdoid Cancer",
+      "sample_count": 19,
+      "prior_probability": 8.376944884111581e-05
+    },
+    {
+      "class_name": "Meningothelial Tumor",
+      "sample_count": 19,
+      "prior_probability": 8.376944884111581e-05
+    },
+    {
+      "class_name": "Pleuropulmonary Blastoma",
+      "sample_count": 19,
+      "prior_probability": 8.376944884111581e-05
+    },
+    {
+      "class_name": "Pineal Parenchymal Tumor of Intermediate Differentiation",
+      "sample_count": 19,
+      "prior_probability": 8.376944884111581e-05
+    },
+    {
+      "class_name": "Pineal Tumor",
+      "sample_count": 19,
+      "prior_probability": 8.376944884111581e-05
+    },
+    {
+      "class_name": "Thyroid",
+      "sample_count": 19,
+      "prior_probability": 8.376944884111581e-05
+    },
+    {
+      "class_name": "Histiocytic Dendritic Cell Sarcoma",
+      "sample_count": 19,
+      "prior_probability": 8.376944884111581e-05
+    },
+    {
+      "class_name": "Smooth Muscle Neoplasm, NOS",
+      "sample_count": 18,
+      "prior_probability": 7.936053048105708e-05
+    },
+    {
+      "class_name": "Myeloid Atypical",
+      "sample_count": 18,
+      "prior_probability": 7.936053048105708e-05
+    },
+    {
+      "class_name": "Mucosal Melanoma of the Urethra",
+      "sample_count": 18,
+      "prior_probability": 7.936053048105708e-05
+    },
+    {
+      "class_name": "B-Lymphoblastic Leukemia/Lymphoma with Hypodiploidy",
+      "sample_count": 18,
+      "prior_probability": 7.936053048105708e-05
+    },
+    {
+      "class_name": "Mixed Cancer Types",
+      "sample_count": 18,
+      "prior_probability": 7.936053048105708e-05
+    },
+    {
+      "class_name": "Ganglioneuroma",
+      "sample_count": 18,
+      "prior_probability": 7.936053048105708e-05
+    },
+    {
+      "class_name": "Conventional Type Chordoma",
+      "sample_count": 18,
+      "prior_probability": 7.936053048105708e-05
+    },
+    {
+      "class_name": "Primary Myelofibrosis, Prefibrotic/Early Stage",
+      "sample_count": 17,
+      "prior_probability": 7.495161212099836e-05
+    },
+    {
+      "class_name": "Well-Differentiated Neuroendocrine Tumors of the Stomach",
+      "sample_count": 17,
+      "prior_probability": 7.495161212099836e-05
+    },
+    {
+      "class_name": "Nodal Peripheral T-Cell Lymphoma with TFH Phenotype",
+      "sample_count": 17,
+      "prior_probability": 7.495161212099836e-05
+    },
+    {
+      "class_name": "Uterine Smooth Muscle Tumor",
+      "sample_count": 17,
+      "prior_probability": 7.495161212099836e-05
+    },
+    {
+      "class_name": "Desmoplastic/Nodular Medulloblastoma, SHH Subtype",
+      "sample_count": 17,
+      "prior_probability": 7.495161212099836e-05
+    },
+    {
+      "class_name": "Uterine Epithelioid Leiomyosarcoma",
+      "sample_count": 17,
+      "prior_probability": 7.495161212099836e-05
+    },
+    {
+      "class_name": "Mesonephric Carcinoma",
+      "sample_count": 17,
+      "prior_probability": 7.495161212099836e-05
+    },
+    {
+      "class_name": "Spindle Cell/Sclerosing Rhabdomyosarcoma",
+      "sample_count": 17,
+      "prior_probability": 7.495161212099836e-05
+    },
+    {
+      "class_name": "Pituitary Carcinoma",
+      "sample_count": 16,
+      "prior_probability": 7.054269376093962e-05
+    },
+    {
+      "class_name": "Mixed Type Metaplastic Breast Cancer",
+      "sample_count": 16,
+      "prior_probability": 7.054269376093962e-05
+    },
+    {
+      "class_name": "Large Cell/Anaplastic Medulloblastoma",
+      "sample_count": 16,
+      "prior_probability": 7.054269376093962e-05
+    },
+    {
+      "class_name": "Ovarian Germ Cell Tumor",
+      "sample_count": 16,
+      "prior_probability": 7.054269376093962e-05
+    },
+    {
+      "class_name": "CNS/Brain",
+      "sample_count": 16,
+      "prior_probability": 7.054269376093962e-05
+    },
+    {
+      "class_name": "Choroid Plexus Tumor",
+      "sample_count": 16,
+      "prior_probability": 7.054269376093962e-05
+    },
+    {
+      "class_name": "Inflammatory Breast Cancer",
+      "sample_count": 16,
+      "prior_probability": 7.054269376093962e-05
+    },
+    {
+      "class_name": "Leiomyoma",
+      "sample_count": 16,
+      "prior_probability": 7.054269376093962e-05
+    },
+    {
+      "class_name": "Amyloidosis",
+      "sample_count": 16,
+      "prior_probability": 7.054269376093962e-05
+    },
+    {
+      "class_name": "Sweat Gland Carcinoma/Apocrine Eccrine Carcinoma",
+      "sample_count": 16,
+      "prior_probability": 7.054269376093962e-05
+    },
+    {
+      "class_name": "Urethral Cancer",
+      "sample_count": 16,
+      "prior_probability": 7.054269376093962e-05
+    },
+    {
+      "class_name": "Mastocytosis",
+      "sample_count": 16,
+      "prior_probability": 7.054269376093962e-05
+    },
+    {
+      "class_name": "Bowel",
+      "sample_count": 16,
+      "prior_probability": 7.054269376093962e-05
+    },
+    {
+      "class_name": "Myxoid Chondrosarcoma",
+      "sample_count": 15,
+      "prior_probability": 6.61337754008809e-05
+    },
+    {
+      "class_name": "Sellar Tumor",
+      "sample_count": 15,
+      "prior_probability": 6.61337754008809e-05
+    },
+    {
+      "class_name": "Primary Neuroepithelial Tumor",
+      "sample_count": 15,
+      "prior_probability": 6.61337754008809e-05
+    },
+    {
+      "class_name": "Proximal-Type Epithelioid Sarcoma",
+      "sample_count": 15,
+      "prior_probability": 6.61337754008809e-05
+    },
+    {
+      "class_name": "Mucinous Stomach Adenocarcinoma",
+      "sample_count": 15,
+      "prior_probability": 6.61337754008809e-05
+    },
+    {
+      "class_name": "Carcinoma ex Pleomorphic Adenoma",
+      "sample_count": 15,
+      "prior_probability": 6.61337754008809e-05
+    },
+    {
+      "class_name": "Granular Cell Tumor",
+      "sample_count": 15,
+      "prior_probability": 6.61337754008809e-05
+    },
+    {
+      "class_name": "Atypical Choroid Plexus Papilloma",
+      "sample_count": 15,
+      "prior_probability": 6.61337754008809e-05
+    },
+    {
+      "class_name": "B-Lymphoblastic Leukemia/Lymphoma with Hyperdiploidy",
+      "sample_count": 15,
+      "prior_probability": 6.61337754008809e-05
+    },
+    {
+      "class_name": "Myeloid Neoplasms with Germ Line Predisposition",
+      "sample_count": 15,
+      "prior_probability": 6.61337754008809e-05
+    },
+    {
+      "class_name": "Breast Sarcoma",
+      "sample_count": 15,
+      "prior_probability": 6.61337754008809e-05
+    },
+    {
+      "class_name": "Medulloblastoma, Group 4",
+      "sample_count": 14,
+      "prior_probability": 6.172485704082218e-05
+    },
+    {
+      "class_name": "Hemangiopericytoma of the Central Nervous System",
+      "sample_count": 14,
+      "prior_probability": 6.172485704082218e-05
+    },
+    {
+      "class_name": "Mixed Cervical Carcinoma",
+      "sample_count": 14,
+      "prior_probability": 6.172485704082218e-05
+    },
+    {
+      "class_name": "Primary Cutaneous Gamma Delta T-Cell Lymphoma",
+      "sample_count": 14,
+      "prior_probability": 6.172485704082218e-05
+    },
+    {
+      "class_name": "Mixed Ampullary Carcinoma",
+      "sample_count": 14,
+      "prior_probability": 6.172485704082218e-05
+    },
+    {
+      "class_name": "Follicular T-Cell Lymphoma",
+      "sample_count": 14,
+      "prior_probability": 6.172485704082218e-05
+    },
+    {
+      "class_name": "Embryonal Tumor with Abundant Neuropil and True Rosettes",
+      "sample_count": 13,
+      "prior_probability": 5.731593868076345e-05
+    },
+    {
+      "class_name": "Colonic Type Adenocarcinoma of the Appendix",
+      "sample_count": 13,
+      "prior_probability": 5.731593868076345e-05
+    },
+    {
+      "class_name": "Germ Cell Tumor, Brain",
+      "sample_count": 13,
+      "prior_probability": 5.731593868076345e-05
+    },
+    {
+      "class_name": "Craniopharyngioma, Papillary Type",
+      "sample_count": 13,
+      "prior_probability": 5.731593868076345e-05
+    },
+    {
+      "class_name": "Pancreatoblastoma",
+      "sample_count": 13,
+      "prior_probability": 5.731593868076345e-05
+    },
+    {
+      "class_name": "B-Lymphoblastic Leukemia/Lymphoma with t(12;21)(p13.2;q22.1); ETV6-RUNX1",
+      "sample_count": 13,
+      "prior_probability": 5.731593868076345e-05
+    },
+    {
+      "class_name": "Poorly Differentiated Vaginal Carcinoma",
+      "sample_count": 13,
+      "prior_probability": 5.731593868076345e-05
+    },
+    {
+      "class_name": "Disseminated Juvenile Xanthogranuloma",
+      "sample_count": 13,
+      "prior_probability": 5.731593868076345e-05
+    },
+    {
+      "class_name": "Gastrointestinal Neuroendocrine Tumors of the Esophagus/Stomach",
+      "sample_count": 13,
+      "prior_probability": 5.731593868076345e-05
+    },
+    {
+      "class_name": "Bone",
+      "sample_count": 12,
+      "prior_probability": 5.290702032070472e-05
+    },
+    {
+      "class_name": "Anaplastic Ganglioglioma",
+      "sample_count": 12,
+      "prior_probability": 5.290702032070472e-05
+    },
+    {
+      "class_name": "Epithelioid Trophoblastic Tumor",
+      "sample_count": 12,
+      "prior_probability": 5.290702032070472e-05
+    },
+    {
+      "class_name": "High-Grade Neuroendocrine Carcinoma of the Stomach",
+      "sample_count": 12,
+      "prior_probability": 5.290702032070472e-05
+    },
+    {
+      "class_name": "Primary Cutaneous CD30 Positive T-Cell Lymphoproliferative Disorders",
+      "sample_count": 12,
+      "prior_probability": 5.290702032070472e-05
+    },
+    {
+      "class_name": "Mucoepidermoid Carcinoma of the Lung",
+      "sample_count": 12,
+      "prior_probability": 5.290702032070472e-05
+    },
+    {
+      "class_name": "Papillary Tumor of the Pineal Region",
+      "sample_count": 12,
+      "prior_probability": 5.290702032070472e-05
+    },
+    {
+      "class_name": "Monomorphic Epitheliotropic Intestinal T-Cell Lymphoma",
+      "sample_count": 12,
+      "prior_probability": 5.290702032070472e-05
+    },
+    {
+      "class_name": "Solid Papillary Carcinoma of the Breast",
+      "sample_count": 12,
+      "prior_probability": 5.290702032070472e-05
+    },
+    {
+      "class_name": "Acinar Cell Carcinoma, NOS",
+      "sample_count": 12,
+      "prior_probability": 5.290702032070472e-05
+    },
+    {
+      "class_name": "Mucinous Cystic Neoplasm",
+      "sample_count": 12,
+      "prior_probability": 5.290702032070472e-05
+    },
+    {
+      "class_name": "Ovarian Seromucinous Carcinoma",
+      "sample_count": 12,
+      "prior_probability": 5.290702032070472e-05
+    },
+    {
+      "class_name": "Metaplastic Squamous Cell Carcinoma",
+      "sample_count": 12,
+      "prior_probability": 5.290702032070472e-05
+    },
+    {
+      "class_name": "Urothelial Papilloma",
+      "sample_count": 12,
+      "prior_probability": 5.290702032070472e-05
+    },
+    {
+      "class_name": "AML with Minimal Differentiation",
+      "sample_count": 12,
+      "prior_probability": 5.290702032070472e-05
+    },
+    {
+      "class_name": "Phyllodes Tumor of the Breast",
+      "sample_count": 11,
+      "prior_probability": 4.8498101960646e-05
+    },
+    {
+      "class_name": "Primary CNS Melanocytic Tumors",
+      "sample_count": 11,
+      "prior_probability": 4.8498101960646e-05
+    },
+    {
+      "class_name": "Cellular Schwannoma",
+      "sample_count": 11,
+      "prior_probability": 4.8498101960646e-05
+    },
+    {
+      "class_name": "NUT Carcinoma of the Lung",
+      "sample_count": 11,
+      "prior_probability": 4.8498101960646e-05
+    },
+    {
+      "class_name": "Skin",
+      "sample_count": 11,
+      "prior_probability": 4.8498101960646e-05
+    },
+    {
+      "class_name": "Hepatosplenic T-cell Lymphoma",
+      "sample_count": 11,
+      "prior_probability": 4.8498101960646e-05
+    },
+    {
+      "class_name": "Undifferentiated Stomach Adenocarcinoma",
+      "sample_count": 11,
+      "prior_probability": 4.8498101960646e-05
+    },
+    {
+      "class_name": "Adenomyoepithelioma of the Breast",
+      "sample_count": 11,
+      "prior_probability": 4.8498101960646e-05
+    },
+    {
+      "class_name": "Porocarcinoma/Spiroadenocarcinoma",
+      "sample_count": 11,
+      "prior_probability": 4.8498101960646e-05
+    },
+    {
+      "class_name": "Medulloblastoma, WNT Subtype",
+      "sample_count": 11,
+      "prior_probability": 4.8498101960646e-05
+    },
+    {
+      "class_name": "Undifferentiated Embryonal Sarcoma of the Liver",
+      "sample_count": 11,
+      "prior_probability": 4.8498101960646e-05
+    },
+    {
+      "class_name": "Desmoplastic Infantile Ganglioglioma",
+      "sample_count": 11,
+      "prior_probability": 4.8498101960646e-05
+    },
+    {
+      "class_name": "Ossifying Fibromyxoid Tumor",
+      "sample_count": 11,
+      "prior_probability": 4.8498101960646e-05
+    },
+    {
+      "class_name": "Esophagus/Stomach",
+      "sample_count": 10,
+      "prior_probability": 4.4089183600587266e-05
+    },
+    {
+      "class_name": "Liver",
+      "sample_count": 10,
+      "prior_probability": 4.4089183600587266e-05
+    },
+    {
+      "class_name": "Liver Angiosarcoma",
+      "sample_count": 10,
+      "prior_probability": 4.4089183600587266e-05
+    },
+    {
+      "class_name": "MDS, Unclassifiable",
+      "sample_count": 10,
+      "prior_probability": 4.4089183600587266e-05
+    },
+    {
+      "class_name": "Posttransplant Lymphoproliferative Disorders",
+      "sample_count": 10,
+      "prior_probability": 4.4089183600587266e-05
+    },
+    {
+      "class_name": "Testicular Mesothelioma",
+      "sample_count": 10,
+      "prior_probability": 4.4089183600587266e-05
+    },
+    {
+      "class_name": "Colon Adenocarcinoma In Situ",
+      "sample_count": 10,
+      "prior_probability": 4.4089183600587266e-05
+    },
+    {
+      "class_name": "Head and Neck",
+      "sample_count": 10,
+      "prior_probability": 4.4089183600587266e-05
+    },
+    {
+      "class_name": "Astroblastoma",
+      "sample_count": 10,
+      "prior_probability": 4.4089183600587266e-05
+    },
+    {
+      "class_name": "Ependymomal Tumor",
+      "sample_count": 10,
+      "prior_probability": 4.4089183600587266e-05
+    },
+    {
+      "class_name": "Papillary Glioneuronal Tumor",
+      "sample_count": 10,
+      "prior_probability": 4.4089183600587266e-05
+    },
+    {
+      "class_name": "Renal Mucinous Tubular Spindle Cell Carcinoma",
+      "sample_count": 10,
+      "prior_probability": 4.4089183600587266e-05
+    },
+    {
+      "class_name": "High-Grade Neuroendocrine Carcinoma of the Esophagus",
+      "sample_count": 10,
+      "prior_probability": 4.4089183600587266e-05
+    },
+    {
+      "class_name": "Lymphoepithelioma-like Carcinoma of the Lung",
+      "sample_count": 10,
+      "prior_probability": 4.4089183600587266e-05
+    },
+    {
+      "class_name": "Nodal Marginal Zone Lymphoma",
+      "sample_count": 10,
+      "prior_probability": 4.4089183600587266e-05
+    },
+    {
+      "class_name": "Basaloid Penile Squamous Cell Carcinoma",
+      "sample_count": 10,
+      "prior_probability": 4.4089183600587266e-05
+    },
+    {
+      "class_name": "Bladder/Urinary Tract",
+      "sample_count": 10,
+      "prior_probability": 4.4089183600587266e-05
+    },
+    {
+      "class_name": "Monomorphic PTLD (B- and T-/NK-cell types)",
+      "sample_count": 10,
+      "prior_probability": 4.4089183600587266e-05
+    },
+    {
+      "class_name": "Urachal Carcinoma",
+      "sample_count": 10,
+      "prior_probability": 4.4089183600587266e-05
+    },
+    {
+      "class_name": "Giant Cell Carcinoma of the Lung",
+      "sample_count": 9,
+      "prior_probability": 3.968026524052854e-05
+    },
+    {
+      "class_name": "Aggressive Digital Papillary Adenocarcinoma",
+      "sample_count": 9,
+      "prior_probability": 3.968026524052854e-05
+    },
+    {
+      "class_name": "Intraductal Papillary Neoplasm of the Bile Duct",
+      "sample_count": 9,
+      "prior_probability": 3.968026524052854e-05
+    },
+    {
+      "class_name": "Gestational Trophoblastic Disease",
+      "sample_count": 9,
+      "prior_probability": 3.968026524052854e-05
+    },
+    {
+      "class_name": "Peritoneum",
+      "sample_count": 9,
+      "prior_probability": 3.968026524052854e-05
+    },
+    {
+      "class_name": "Extraosseous Plasmacytoma",
+      "sample_count": 9,
+      "prior_probability": 3.968026524052854e-05
+    },
+    {
+      "class_name": "Epithelial-Myoepithelial Carcinoma",
+      "sample_count": 9,
+      "prior_probability": 3.968026524052854e-05
+    },
+    {
+      "class_name": "High-Grade Surface Osteosarcoma",
+      "sample_count": 9,
+      "prior_probability": 3.968026524052854e-05
+    },
+    {
+      "class_name": "Lymphoid Benign",
+      "sample_count": 9,
+      "prior_probability": 3.968026524052854e-05
+    },
+    {
+      "class_name": "Clear cell Meningioma",
+      "sample_count": 9,
+      "prior_probability": 3.968026524052854e-05
+    },
+    {
+      "class_name": "Plasmablastic Lymphoma",
+      "sample_count": 9,
+      "prior_probability": 3.968026524052854e-05
+    },
+    {
+      "class_name": "Melanotic Schwannoma",
+      "sample_count": 9,
+      "prior_probability": 3.968026524052854e-05
+    },
+    {
+      "class_name": "Breast Invasive Carcinosarcoma, NOS",
+      "sample_count": 8,
+      "prior_probability": 3.527134688046981e-05
+    },
+    {
+      "class_name": "B-Lymphoblastic Leukemia/Lymphoma with t(1;19)(q23;p13.3);TCF3-PBX1",
+      "sample_count": 8,
+      "prior_probability": 3.527134688046981e-05
+    },
+    {
+      "class_name": "Pseudomyogenic Hemangioendothelioma",
+      "sample_count": 8,
+      "prior_probability": 3.527134688046981e-05
+    },
+    {
+      "class_name": "Chronic Neutrophilic Leukemia",
+      "sample_count": 8,
+      "prior_probability": 3.527134688046981e-05
+    },
+    {
+      "class_name": "Uterine Adenosquamous Carcinoma",
+      "sample_count": 8,
+      "prior_probability": 3.527134688046981e-05
+    },
+    {
+      "class_name": "Clear Cell Sarcoma of Kidney",
+      "sample_count": 8,
+      "prior_probability": 3.527134688046981e-05
+    },
+    {
+      "class_name": "IgM",
+      "sample_count": 8,
+      "prior_probability": 3.527134688046981e-05
+    },
+    {
+      "class_name": "Extraventricular Neurocytoma",
+      "sample_count": 8,
+      "prior_probability": 3.527134688046981e-05
+    },
+    {
+      "class_name": "Basaloid Large Cell Carcinoma of the Lung",
+      "sample_count": 8,
+      "prior_probability": 3.527134688046981e-05
+    },
+    {
+      "class_name": "Adenosquamous Carcinoma of the Stomach",
+      "sample_count": 7,
+      "prior_probability": 3.086242852041109e-05
+    },
+    {
+      "class_name": "Primary Cutaneous Follicle Center Lymphoma",
+      "sample_count": 7,
+      "prior_probability": 3.086242852041109e-05
+    },
+    {
+      "class_name": "Mucinous Adenocarcinoma of the Vulva/Vagina",
+      "sample_count": 7,
+      "prior_probability": 3.086242852041109e-05
+    },
+    {
+      "class_name": "Atypical Fibroxanthoma",
+      "sample_count": 7,
+      "prior_probability": 3.086242852041109e-05
+    },
+    {
+      "class_name": "Myeloid/Lymphoid Neoplasms with Eosinophilia and Rearrangement of  PDGFRA/PDGFRB or FGFR1 or with PCM1-JAK2",
+      "sample_count": 7,
+      "prior_probability": 3.086242852041109e-05
+    },
+    {
+      "class_name": "Parosteal Osteosarcoma",
+      "sample_count": 7,
+      "prior_probability": 3.086242852041109e-05
+    },
+    {
+      "class_name": "Small Cell Glioblastoma",
+      "sample_count": 7,
+      "prior_probability": 3.086242852041109e-05
+    },
+    {
+      "class_name": "Atypical Pituitary Adenoma",
+      "sample_count": 7,
+      "prior_probability": 3.086242852041109e-05
+    },
+    {
+      "class_name": "Signet Ring Mucinous Carcinoma",
+      "sample_count": 7,
+      "prior_probability": 3.086242852041109e-05
+    },
+    {
+      "class_name": "Chordoid Meningioma",
+      "sample_count": 7,
+      "prior_probability": 3.086242852041109e-05
+    },
+    {
+      "class_name": "Atypical Chronic Myeloid Leukemia, BCR-ABL1-",
+      "sample_count": 7,
+      "prior_probability": 3.086242852041109e-05
+    },
+    {
+      "class_name": "Myeloid Leukemia Associated with Down Syndrome",
+      "sample_count": 7,
+      "prior_probability": 3.086242852041109e-05
+    },
+    {
+      "class_name": "Sweat Gland Adenocarcinoma",
+      "sample_count": 7,
+      "prior_probability": 3.086242852041109e-05
+    },
+    {
+      "class_name": "Infantile Fibrosarcoma",
+      "sample_count": 7,
+      "prior_probability": 3.086242852041109e-05
+    },
+    {
+      "class_name": "Mucosal Melanoma of the Esophagus",
+      "sample_count": 7,
+      "prior_probability": 3.086242852041109e-05
+    },
+    {
+      "class_name": "Chronic Lymphoproliferative Disorder of NK Cells",
+      "sample_count": 7,
+      "prior_probability": 3.086242852041109e-05
+    },
+    {
+      "class_name": "B-Cell Lymphoma, Unclassifiable, with Features Intermediate between DLBCL and Classical Hodgkin lymphoma",
+      "sample_count": 7,
+      "prior_probability": 3.086242852041109e-05
+    },
+    {
+      "class_name": "Small Cell Carcinoma of the Stomach",
+      "sample_count": 7,
+      "prior_probability": 3.086242852041109e-05
+    },
+    {
+      "class_name": "Rhabdoid Meningioma",
+      "sample_count": 7,
+      "prior_probability": 3.086242852041109e-05
+    },
+    {
+      "class_name": "Myeloid Benign",
+      "sample_count": 7,
+      "prior_probability": 3.086242852041109e-05
+    },
+    {
+      "class_name": "Adamantinoma",
+      "sample_count": 6,
+      "prior_probability": 2.645351016035236e-05
+    },
+    {
+      "class_name": "AML with BCR-ABL1",
+      "sample_count": 6,
+      "prior_probability": 2.645351016035236e-05
+    },
+    {
+      "class_name": "Ovarian Choriocarcinoma, NOS",
+      "sample_count": 6,
+      "prior_probability": 2.645351016035236e-05
+    },
+    {
+      "class_name": "Secondary Osteosarcoma",
+      "sample_count": 6,
+      "prior_probability": 2.645351016035236e-05
+    },
+    {
+      "class_name": "Basal Cell Adenocarcinoma",
+      "sample_count": 6,
+      "prior_probability": 2.645351016035236e-05
+    },
+    {
+      "class_name": "Primary CNS Melanoma",
+      "sample_count": 6,
+      "prior_probability": 2.645351016035236e-05
+    },
+    {
+      "class_name": "Myeloid/Lymphoid Neoplasms with PDGFRA Rearrangement",
+      "sample_count": 6,
+      "prior_probability": 2.645351016035236e-05
+    },
+    {
+      "class_name": "Thymic Epithelial Tumor",
+      "sample_count": 6,
+      "prior_probability": 2.645351016035236e-05
+    },
+    {
+      "class_name": "Juvenile Secretory Carcinoma of the Breast",
+      "sample_count": 6,
+      "prior_probability": 2.645351016035236e-05
+    },
+    {
+      "class_name": "Mixed Phenotype Acute Leukemia with t(v;11q23.3); KMT2A Rearranged",
+      "sample_count": 6,
+      "prior_probability": 2.645351016035236e-05
+    },
+    {
+      "class_name": "Uterine Mucinous Carcinoma",
+      "sample_count": 6,
+      "prior_probability": 2.645351016035236e-05
+    },
+    {
+      "class_name": "Periosteal Osteosarcoma",
+      "sample_count": 6,
+      "prior_probability": 2.645351016035236e-05
+    },
+    {
+      "class_name": "B-Lymphoblastic Leukemia/Lymphoma with Recurrent Genetic Abnormalities",
+      "sample_count": 6,
+      "prior_probability": 2.645351016035236e-05
+    },
+    {
+      "class_name": "Prostate Squamous Cell Carcinoma",
+      "sample_count": 6,
+      "prior_probability": 2.645351016035236e-05
+    },
+    {
+      "class_name": "Medulloblastoma, Group 3",
+      "sample_count": 6,
+      "prior_probability": 2.645351016035236e-05
+    },
+    {
+      "class_name": "Renal Neuroendocrine Tumor",
+      "sample_count": 6,
+      "prior_probability": 2.645351016035236e-05
+    },
+    {
+      "class_name": "Uterus",
+      "sample_count": 6,
+      "prior_probability": 2.645351016035236e-05
+    },
+    {
+      "class_name": "Small Cell Gallbladder Carcinoma",
+      "sample_count": 5,
+      "prior_probability": 2.2044591800293633e-05
+    },
+    {
+      "class_name": "Anaplastic Medulloblastoma, SHH Subtype",
+      "sample_count": 5,
+      "prior_probability": 2.2044591800293633e-05
+    },
+    {
+      "class_name": "Adenosquamous Carcinoma of the Tongue",
+      "sample_count": 5,
+      "prior_probability": 2.2044591800293633e-05
+    },
+    {
+      "class_name": "Primary Cutaneous CD4 Positive Small/Medium T-Cell Lymphoproliferative Disorder",
+      "sample_count": 5,
+      "prior_probability": 2.2044591800293633e-05
+    },
+    {
+      "class_name": "Metaplastic Carcinosarcoma",
+      "sample_count": 5,
+      "prior_probability": 2.2044591800293633e-05
+    },
+    {
+      "class_name": "Basal Cell Carcinoma of Prostate",
+      "sample_count": 5,
+      "prior_probability": 2.2044591800293633e-05
+    },
+    {
+      "class_name": "Metaplastic Adenosquamous Carcinoma",
+      "sample_count": 5,
+      "prior_probability": 2.2044591800293633e-05
+    },
+    {
+      "class_name": "High-Grade Neuroendocrine Carcinoma of the Ovary",
+      "sample_count": 5,
+      "prior_probability": 2.2044591800293633e-05
+    },
+    {
+      "class_name": "Chondroblastoma",
+      "sample_count": 5,
+      "prior_probability": 2.2044591800293633e-05
+    },
+    {
+      "class_name": "Oncocytic Adenoma of the Thyroid",
+      "sample_count": 5,
+      "prior_probability": 2.2044591800293633e-05
+    },
+    {
+      "class_name": "Pineocytoma",
+      "sample_count": 5,
+      "prior_probability": 2.2044591800293633e-05
+    },
+    {
+      "class_name": "Myeloid/Lymphoid Neoplasms with PCM1-JAK2",
+      "sample_count": 5,
+      "prior_probability": 2.2044591800293633e-05
+    },
+    {
+      "class_name": "Acute Megakaryoblastic Leukemia",
+      "sample_count": 5,
+      "prior_probability": 2.2044591800293633e-05
+    },
+    {
+      "class_name": "Langerhans Cell Sarcoma",
+      "sample_count": 5,
+      "prior_probability": 2.2044591800293633e-05
+    },
+    {
+      "class_name": "Breast Implant-Associated Anaplastic Large-Cell Lymphoma",
+      "sample_count": 5,
+      "prior_probability": 2.2044591800293633e-05
+    },
+    {
+      "class_name": "Myofibromatosis",
+      "sample_count": 5,
+      "prior_probability": 2.2044591800293633e-05
+    },
+    {
+      "class_name": "Primary Cutaneous CD8 Positive Aggressive Epidermotropic Cytotoxic T-Cell Lymphoma",
+      "sample_count": 5,
+      "prior_probability": 2.2044591800293633e-05
+    },
+    {
+      "class_name": "Myopericytoma",
+      "sample_count": 5,
+      "prior_probability": 2.2044591800293633e-05
+    },
+    {
+      "class_name": "Intraductal Tubulopapillary Neoplasm",
+      "sample_count": 5,
+      "prior_probability": 2.2044591800293633e-05
+    },
+    {
+      "class_name": "Pleomorphic Adenoma",
+      "sample_count": 5,
+      "prior_probability": 2.2044591800293633e-05
+    },
+    {
+      "class_name": "Telangiectatic Osteosarcoma",
+      "sample_count": 5,
+      "prior_probability": 2.2044591800293633e-05
+    },
+    {
+      "class_name": "Kidney",
+      "sample_count": 5,
+      "prior_probability": 2.2044591800293633e-05
+    },
+    {
+      "class_name": "Primary Cutaneous DLBCL, Leg Type",
+      "sample_count": 5,
+      "prior_probability": 2.2044591800293633e-05
+    },
+    {
+      "class_name": "Dermatofibroma",
+      "sample_count": 5,
+      "prior_probability": 2.2044591800293633e-05
+    },
+    {
+      "class_name": "Natural Killer (NK) Cell Lymphoblastic Leukemia/Lymphoma",
+      "sample_count": 5,
+      "prior_probability": 2.2044591800293633e-05
+    },
+    {
+      "class_name": "Breast Carcinoma with Signet Ring",
+      "sample_count": 4,
+      "prior_probability": 1.7635673440234906e-05
+    },
+    {
+      "class_name": "Medulloepithelioma",
+      "sample_count": 4,
+      "prior_probability": 1.7635673440234906e-05
+    },
+    {
+      "class_name": "Serous Cystadenoma of the Pancreas",
+      "sample_count": 4,
+      "prior_probability": 1.7635673440234906e-05
+    },
+    {
+      "class_name": "Intravascular Large B-Cell Lymphoma",
+      "sample_count": 4,
+      "prior_probability": 1.7635673440234906e-05
+    },
+    {
+      "class_name": "Intestinal Type Mucinous Carcinoma",
+      "sample_count": 4,
+      "prior_probability": 1.7635673440234906e-05
+    },
+    {
+      "class_name": "Solitary Plasmacytoma of Bone",
+      "sample_count": 4,
+      "prior_probability": 1.7635673440234906e-05
+    },
+    {
+      "class_name": "Malignant Glomus Tumor",
+      "sample_count": 4,
+      "prior_probability": 1.7635673440234906e-05
+    },
+    {
+      "class_name": "Adrenal Gland",
+      "sample_count": 4,
+      "prior_probability": 1.7635673440234906e-05
+    },
+    {
+      "class_name": "Papillary Stomach Adenocarcinoma",
+      "sample_count": 4,
+      "prior_probability": 1.7635673440234906e-05
+    },
+    {
+      "class_name": "Cervical Rhabdomyosarcoma",
+      "sample_count": 4,
+      "prior_probability": 1.7635673440234906e-05
+    },
+    {
+      "class_name": "Microcystic Adnexal Carcinoma",
+      "sample_count": 4,
+      "prior_probability": 1.7635673440234906e-05
+    },
+    {
+      "class_name": "Inflammatory Myofibroblastic Lung Tumor",
+      "sample_count": 4,
+      "prior_probability": 1.7635673440234906e-05
+    },
+    {
+      "class_name": "Cervical Adenocarcinoma In Situ",
+      "sample_count": 4,
+      "prior_probability": 1.7635673440234906e-05
+    },
+    {
+      "class_name": "Medulloblastoma with Extensive Nodularity",
+      "sample_count": 4,
+      "prior_probability": 1.7635673440234906e-05
+    },
+    {
+      "class_name": "Chordoid Glioma of the Third Ventricle",
+      "sample_count": 4,
+      "prior_probability": 1.7635673440234906e-05
+    },
+    {
+      "class_name": "Ciliated Muconodular Papillary Tumor of the Lung",
+      "sample_count": 4,
+      "prior_probability": 1.7635673440234906e-05
+    },
+    {
+      "class_name": "Vulva/Vagina",
+      "sample_count": 4,
+      "prior_probability": 1.7635673440234906e-05
+    },
+    {
+      "class_name": "Myeloid/Lymphoid Neoplasms with FGFR1 Rearrangement",
+      "sample_count": 4,
+      "prior_probability": 1.7635673440234906e-05
+    },
+    {
+      "class_name": "Cutaneous Mastocytosis",
+      "sample_count": 4,
+      "prior_probability": 1.7635673440234906e-05
+    },
+    {
+      "class_name": "Chronic Eosinophilic Leukemia, NOS",
+      "sample_count": 4,
+      "prior_probability": 1.7635673440234906e-05
+    },
+    {
+      "class_name": "Lacrimal Gland Tumor",
+      "sample_count": 4,
+      "prior_probability": 1.7635673440234906e-05
+    },
+    {
+      "class_name": "Parathyroid Cancer",
+      "sample_count": 4,
+      "prior_probability": 1.7635673440234906e-05
+    },
+    {
+      "class_name": "Dysplastic Gangliocytoma of the Cerebellum/Lhermitte-Duclos Disease",
+      "sample_count": 3,
+      "prior_probability": 1.322675508017618e-05
+    },
+    {
+      "class_name": "Biliary Tract",
+      "sample_count": 3,
+      "prior_probability": 1.322675508017618e-05
+    },
+    {
+      "class_name": "B-Lymphoblastic Leukemia/Lymphoma with iAMP21",
+      "sample_count": 3,
+      "prior_probability": 1.322675508017618e-05
+    },
+    {
+      "class_name": "Steroid Cell Tumor, NOS",
+      "sample_count": 3,
+      "prior_probability": 1.322675508017618e-05
+    },
+    {
+      "class_name": "Intracholecystic Papillary Neoplasm",
+      "sample_count": 3,
+      "prior_probability": 1.322675508017618e-05
+    },
+    {
+      "class_name": "Epithelial Type Metaplastic Breast Cancer",
+      "sample_count": 3,
+      "prior_probability": 1.322675508017618e-05
+    },
+    {
+      "class_name": "Fibrothecoma",
+      "sample_count": 3,
+      "prior_probability": 1.322675508017618e-05
+    },
+    {
+      "class_name": "ALK Positive Large B-Cell Lymphoma",
+      "sample_count": 3,
+      "prior_probability": 1.322675508017618e-05
+    },
+    {
+      "class_name": "Low-Grade Central Osteosarcoma",
+      "sample_count": 3,
+      "prior_probability": 1.322675508017618e-05
+    },
+    {
+      "class_name": "Ovarian Seromucinous Borderline Tumor",
+      "sample_count": 3,
+      "prior_probability": 1.322675508017618e-05
+    },
+    {
+      "class_name": "Adenoid Cystic Carcinoma of the Lacrimal Gland",
+      "sample_count": 3,
+      "prior_probability": 1.322675508017618e-05
+    },
+    {
+      "class_name": "Lymphomatoid Papulosis",
+      "sample_count": 3,
+      "prior_probability": 1.322675508017618e-05
+    },
+    {
+      "class_name": "Spindle Cell Oncocytoma of the Adenohypophysis",
+      "sample_count": 3,
+      "prior_probability": 1.322675508017618e-05
+    },
+    {
+      "class_name": "Glomangiosarcoma",
+      "sample_count": 3,
+      "prior_probability": 1.322675508017618e-05
+    },
+    {
+      "class_name": "Enteropathy-Associated T-Cell Lymphoma",
+      "sample_count": 3,
+      "prior_probability": 1.322675508017618e-05
+    },
+    {
+      "class_name": "Osteoclastic Giant Cell Tumor",
+      "sample_count": 3,
+      "prior_probability": 1.322675508017618e-05
+    },
+    {
+      "class_name": "Placental Site Trophoblastic Tumor",
+      "sample_count": 3,
+      "prior_probability": 1.322675508017618e-05
+    },
+    {
+      "class_name": "Pulmonary Lymphangiomyomatosis",
+      "sample_count": 3,
+      "prior_probability": 1.322675508017618e-05
+    },
+    {
+      "class_name": "Odontogenic Carcinoma",
+      "sample_count": 3,
+      "prior_probability": 1.322675508017618e-05
+    },
+    {
+      "class_name": "Fibroadenoma",
+      "sample_count": 3,
+      "prior_probability": 1.322675508017618e-05
+    },
+    {
+      "class_name": "Testicular Lymphoma",
+      "sample_count": 3,
+      "prior_probability": 1.322675508017618e-05
+    },
+    {
+      "class_name": "Renal Small Cell Carcinoma",
+      "sample_count": 3,
+      "prior_probability": 1.322675508017618e-05
+    },
+    {
+      "class_name": "Benign Phyllodes Tumor of the Breast",
+      "sample_count": 3,
+      "prior_probability": 1.322675508017618e-05
+    },
+    {
+      "class_name": "Adenocarcinoma In Situ",
+      "sample_count": 3,
+      "prior_probability": 1.322675508017618e-05
+    },
+    {
+      "class_name": "Gangliocytoma",
+      "sample_count": 3,
+      "prior_probability": 1.322675508017618e-05
+    },
+    {
+      "class_name": "B-Cell Prolymphocytic Leukemia",
+      "sample_count": 3,
+      "prior_probability": 1.322675508017618e-05
+    },
+    {
+      "class_name": "Dedifferentiated Chordoma",
+      "sample_count": 3,
+      "prior_probability": 1.322675508017618e-05
+    },
+    {
+      "class_name": "Eye",
+      "sample_count": 3,
+      "prior_probability": 1.322675508017618e-05
+    },
+    {
+      "class_name": "Borderline Phyllodes Tumor of the Breast",
+      "sample_count": 3,
+      "prior_probability": 1.322675508017618e-05
+    },
+    {
+      "class_name": "Salivary Gland-Type Tumor of the Lung",
+      "sample_count": 3,
+      "prior_probability": 1.322675508017618e-05
+    },
+    {
+      "class_name": "Pediatric-Type Follicular Lymphoma",
+      "sample_count": 3,
+      "prior_probability": 1.322675508017618e-05
+    },
+    {
+      "class_name": "Prostate",
+      "sample_count": 3,
+      "prior_probability": 1.322675508017618e-05
+    },
+    {
+      "class_name": "Pituicytoma",
+      "sample_count": 3,
+      "prior_probability": 1.322675508017618e-05
+    },
+    {
+      "class_name": "Spiroma/Spiradenoma",
+      "sample_count": 3,
+      "prior_probability": 1.322675508017618e-05
+    },
+    {
+      "class_name": "IgG",
+      "sample_count": 3,
+      "prior_probability": 1.322675508017618e-05
+    },
+    {
+      "class_name": "Hairy Cell Leukemia-Variant",
+      "sample_count": 3,
+      "prior_probability": 1.322675508017618e-05
+    },
+    {
+      "class_name": "Indeterminate Dendritic Cell Tumor",
+      "sample_count": 3,
+      "prior_probability": 1.322675508017618e-05
+    },
+    {
+      "class_name": "Complete Hydatidiform Mole",
+      "sample_count": 2,
+      "prior_probability": 8.817836720117453e-06
+    },
+    {
+      "class_name": "Pure Erythroid Leukemia",
+      "sample_count": 2,
+      "prior_probability": 8.817836720117453e-06
+    },
+    {
+      "class_name": "Polymorphous Adenocarcinoma",
+      "sample_count": 2,
+      "prior_probability": 8.817836720117453e-06
+    },
+    {
+      "class_name": "Carcinoma with Chondroid Metaplasia",
+      "sample_count": 2,
+      "prior_probability": 8.817836720117453e-06
+    },
+    {
+      "class_name": "Fibroblastic Osteosarcoma",
+      "sample_count": 2,
+      "prior_probability": 8.817836720117453e-06
+    },
+    {
+      "class_name": "Cervical Adenoid Cystic Carcinoma",
+      "sample_count": 2,
+      "prior_probability": 8.817836720117453e-06
+    },
+    {
+      "class_name": "Metaplastic Adenocarcinoma with Spindle Cell Differentiation",
+      "sample_count": 2,
+      "prior_probability": 8.817836720117453e-06
+    },
+    {
+      "class_name": "Clear Cell Ependymoma",
+      "sample_count": 2,
+      "prior_probability": 8.817836720117453e-06
+    },
+    {
+      "class_name": "Clear Cell Carcinoma of the Lung",
+      "sample_count": 2,
+      "prior_probability": 8.817836720117453e-06
+    },
+    {
+      "class_name": "Primary Cutaneous Anaplastic Large Cell Lymphoma",
+      "sample_count": 2,
+      "prior_probability": 8.817836720117453e-06
+    },
+    {
+      "class_name": "Medulloblastoma, NOS",
+      "sample_count": 2,
+      "prior_probability": 8.817836720117453e-06
+    },
+    {
+      "class_name": "Endometrioid Borderlin Ovarian Tumor",
+      "sample_count": 2,
+      "prior_probability": 8.817836720117453e-06
+    },
+    {
+      "class_name": "Subcutaneous Panniculitis-Like T-Cell Lymphoma",
+      "sample_count": 2,
+      "prior_probability": 8.817836720117453e-06
+    },
+    {
+      "class_name": "Proliferating Pilar Cystic Tumor",
+      "sample_count": 2,
+      "prior_probability": 8.817836720117453e-06
+    },
+    {
+      "class_name": "Acute Undifferentiated Leukemia",
+      "sample_count": 2,
+      "prior_probability": 8.817836720117453e-06
+    },
+    {
+      "class_name": "Indolent Systemic Mastocytosis",
+      "sample_count": 2,
+      "prior_probability": 8.817836720117453e-06
+    },
+    {
+      "class_name": "Myeloid",
+      "sample_count": 2,
+      "prior_probability": 8.817836720117453e-06
+    },
+    {
+      "class_name": "Malignant Nonepithelial Tumor of the Liver",
+      "sample_count": 2,
+      "prior_probability": 8.817836720117453e-06
+    },
+    {
+      "class_name": "Polymorphic PTLD",
+      "sample_count": 2,
+      "prior_probability": 8.817836720117453e-06
+    },
+    {
+      "class_name": "Gastric Remnant Adenocarcinoma",
+      "sample_count": 2,
+      "prior_probability": 8.817836720117453e-06
+    },
+    {
+      "class_name": "Endocrine Mucin Producing Sweat Gland Carcinoma",
+      "sample_count": 2,
+      "prior_probability": 8.817836720117453e-06
+    },
+    {
+      "class_name": "Paget Disease of the Nipple",
+      "sample_count": 2,
+      "prior_probability": 8.817836720117453e-06
+    },
+    {
+      "class_name": "Lymphoid",
+      "sample_count": 2,
+      "prior_probability": 8.817836720117453e-06
+    },
+    {
+      "class_name": "Hyalinizing Trabecular Adenoma of the Thyroid",
+      "sample_count": 2,
+      "prior_probability": 8.817836720117453e-06
+    },
+    {
+      "class_name": "Aggressive NK-Cell Leukemia",
+      "sample_count": 2,
+      "prior_probability": 8.817836720117453e-06
+    },
+    {
+      "class_name": "Glassy Cell Carcinoma of the Cervix",
+      "sample_count": 2,
+      "prior_probability": 8.817836720117453e-06
+    },
+    {
+      "class_name": "Peripheral Nervous System",
+      "sample_count": 2,
+      "prior_probability": 8.817836720117453e-06
+    },
+    {
+      "class_name": "Small Cell Osteosarcoma",
+      "sample_count": 2,
+      "prior_probability": 8.817836720117453e-06
+    },
+    {
+      "class_name": "Clear Cell Borderline Ovarian Tumor",
+      "sample_count": 2,
+      "prior_probability": 8.817836720117453e-06
+    },
+    {
+      "class_name": "Brenner Tumor",
+      "sample_count": 2,
+      "prior_probability": 8.817836720117453e-06
+    },
+    {
+      "class_name": "Burkitt-Like Lymphoma with 11q Aberration",
+      "sample_count": 2,
+      "prior_probability": 8.817836720117453e-06
+    },
+    {
+      "class_name": "Malignant Teratoma",
+      "sample_count": 2,
+      "prior_probability": 8.817836720117453e-06
+    },
+    {
+      "class_name": "Clear Cell Odontogenic Carcinoma",
+      "sample_count": 2,
+      "prior_probability": 8.817836720117453e-06
+    },
+    {
+      "class_name": "Dendritic Cell Sarcoma",
+      "sample_count": 2,
+      "prior_probability": 8.817836720117453e-06
+    },
+    {
+      "class_name": "Aggressive Angiomyxoma",
+      "sample_count": 2,
+      "prior_probability": 8.817836720117453e-06
+    },
+    {
+      "class_name": "Primary Effusion Lymphoma",
+      "sample_count": 2,
+      "prior_probability": 8.817836720117453e-06
+    },
+    {
+      "class_name": "Mixed Cellularity Classical Hodgkin Lymphoma",
+      "sample_count": 1,
+      "prior_probability": 4.4089183600587264e-06
+    },
+    {
+      "class_name": "Papillary Meningioma",
+      "sample_count": 1,
+      "prior_probability": 4.4089183600587264e-06
+    },
+    {
+      "class_name": "Systemic EBV Positive T-Cell Lymphoma of Childhood",
+      "sample_count": 1,
+      "prior_probability": 4.4089183600587264e-06
+    },
+    {
+      "class_name": "Mast Cell Leukemia",
+      "sample_count": 1,
+      "prior_probability": 4.4089183600587264e-06
+    },
+    {
+      "class_name": "Medullomyoblastoma",
+      "sample_count": 1,
+      "prior_probability": 4.4089183600587264e-06
+    },
+    {
+      "class_name": "Cervical Leiomyosarcoma",
+      "sample_count": 1,
+      "prior_probability": 4.4089183600587264e-06
+    },
+    {
+      "class_name": "Duodenal-Type Follicular Lymphoma",
+      "sample_count": 1,
+      "prior_probability": 4.4089183600587264e-06
+    },
+    {
+      "class_name": "Carcinoma with Osseous Metaplasia",
+      "sample_count": 1,
+      "prior_probability": 4.4089183600587264e-06
+    },
+    {
+      "class_name": "Myeloid/Lymphoid Neoplasms with PDGFRB Rearrangement",
+      "sample_count": 1,
+      "prior_probability": 4.4089183600587264e-06
+    },
+    {
+      "class_name": "AML (megakaryoblastic) with t(1;22)(p13.3;q13.3);RBM15-MKL1",
+      "sample_count": 1,
+      "prior_probability": 4.4089183600587264e-06
+    },
+    {
+      "class_name": "Lymphomatoid Granulomatosis",
+      "sample_count": 1,
+      "prior_probability": 4.4089183600587264e-06
+    },
+    {
+      "class_name": "Anaplastic Medulloblastoma, Group 3",
+      "sample_count": 1,
+      "prior_probability": 4.4089183600587264e-06
+    },
+    {
+      "class_name": "Cervix",
+      "sample_count": 1,
+      "prior_probability": 4.4089183600587264e-06
+    },
+    {
+      "class_name": "Inverted Urothelial Papilloma",
+      "sample_count": 1,
+      "prior_probability": 4.4089183600587264e-06
+    },
+    {
+      "class_name": "IgA",
+      "sample_count": 1,
+      "prior_probability": 4.4089183600587264e-06
+    },
+    {
+      "class_name": "Transient Abnormal Myelopoiesis",
+      "sample_count": 1,
+      "prior_probability": 4.4089183600587264e-06
+    },
+    {
+      "class_name": "Interdigitating Dendritic Cell Sarcoma",
+      "sample_count": 1,
+      "prior_probability": 4.4089183600587264e-06
+    },
+    {
+      "class_name": "Florid Follicular Hyperplasia PTLD",
+      "sample_count": 1,
+      "prior_probability": 4.4089183600587264e-06
+    },
+    {
+      "class_name": "Brenner Tumor, Borderline",
+      "sample_count": 1,
+      "prior_probability": 4.4089183600587264e-06
+    },
+    {
+      "class_name": "Sialoblastoma",
+      "sample_count": 1,
+      "prior_probability": 4.4089183600587264e-06
+    },
+    {
+      "class_name": "Villoglandular Adenocarcinoma of the Cervix",
+      "sample_count": 1,
+      "prior_probability": 4.4089183600587264e-06
+    },
+    {
+      "class_name": "Testis",
+      "sample_count": 1,
+      "prior_probability": 4.4089183600587264e-06
+    },
+    {
+      "class_name": "Fibroblastic Reticular Cell Tumor",
+      "sample_count": 1,
+      "prior_probability": 4.4089183600587264e-06
+    },
+    {
+      "class_name": "Brenner Tumor, Malignant",
+      "sample_count": 1,
+      "prior_probability": 4.4089183600587264e-06
+    },
+    {
+      "class_name": "Desmoplastic Trichoepithelioma",
+      "sample_count": 1,
+      "prior_probability": 4.4089183600587264e-06
+    },
+    {
+      "class_name": "Inflammatory Myofibroblastic Bladder Tumor",
+      "sample_count": 1,
+      "prior_probability": 4.4089183600587264e-06
+    },
+    {
+      "class_name": "Malignant Rhabdoid Tumor of the Liver",
+      "sample_count": 1,
+      "prior_probability": 4.4089183600587264e-06
+    },
+    {
+      "class_name": "Myeloid Proliferations Related to Down Syndrome",
+      "sample_count": 1,
+      "prior_probability": 4.4089183600587264e-06
+    },
+    {
+      "class_name": "Intraductal Oncocytic Papillary Neoplasm",
+      "sample_count": 1,
+      "prior_probability": 4.4089183600587264e-06
+    },
+    {
+      "class_name": "Classical Hodgkin Lymphoma PTLD",
+      "sample_count": 1,
+      "prior_probability": 4.4089183600587264e-06
+    },
+    {
+      "class_name": "Large B-Cell Lymphoma with IRF4 Rearrangement",
+      "sample_count": 1,
+      "prior_probability": 4.4089183600587264e-06
+    },
+    {
+      "class_name": "Gonadoblastoma",
+      "sample_count": 1,
+      "prior_probability": 4.4089183600587264e-06
+    },
+    {
+      "class_name": "Infectious Mononucleosis PTLD",
+      "sample_count": 1,
+      "prior_probability": 4.4089183600587264e-06
+    },
+    {
+      "class_name": "Ovarian Seromucinous Adenoma",
+      "sample_count": 1,
+      "prior_probability": 4.4089183600587264e-06
+    },
+    {
+      "class_name": "Mesenchymal Chondrosarcoma of the CNS",
+      "sample_count": 1,
+      "prior_probability": 4.4089183600587264e-06
+    }
+  ]
+}

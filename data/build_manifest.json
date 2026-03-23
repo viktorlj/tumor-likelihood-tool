@@ -1,0 +1,22 @@
+{
+  "model_version": "genie-webapp-20260319T083738Z",
+  "generated_at_utc": "2026-03-19T08:37:38.568150+00:00",
+  "sources": {
+    "clinical": "/Volumes/Vault/Projects/allele_enrichment/claude/results/selection_output/clinical_samples_grouped.csv",
+    "mut_allele_detailed": "/Volumes/Vault/Projects/allele_enrichment/claude/results/mutation_enrichment/by_cancer_type_detailed/allele_enrichment_all.csv",
+    "mut_gene_detailed": "/Volumes/Vault/Projects/allele_enrichment/claude/results/mutation_enrichment/by_cancer_type_detailed/gene_enrichment_all.csv",
+    "cna_detailed": "/Volumes/Vault/Projects/allele_enrichment/claude/results/cna_enrichment/by_cancer_type_detailed/cna_enrichment_all.csv",
+    "mut_allele_tumor": "/Volumes/Vault/Projects/allele_enrichment/claude/results/mutation_enrichment/by_tumor_type/allele_enrichment_all.csv",
+    "mut_gene_tumor": "/Volumes/Vault/Projects/allele_enrichment/claude/results/mutation_enrichment/by_tumor_type/gene_enrichment_all.csv",
+    "cna_tumor": "/Volumes/Vault/Projects/allele_enrichment/claude/results/cna_enrichment/by_tumor_type/cna_enrichment_all.csv",
+    "pair_mut_mut_tumor": "/Volumes/Vault/Projects/allele_enrichment/claude/results/genepair_enrichment/by_tumor_type/genepair_mut_mut_all.csv",
+    "pair_mut_amp_tumor": "/Volumes/Vault/Projects/allele_enrichment/claude/results/genepair_enrichment/by_tumor_type/genepair_mut_amp_all.csv",
+    "pair_mut_del_tumor": "/Volumes/Vault/Projects/allele_enrichment/claude/results/genepair_enrichment/by_tumor_type/genepair_mut_del_all.csv"
+  },
+  "rows": {
+    "evidence_detailed": 354208,
+    "evidence_tumor": 416160,
+    "priors_detailed_classes": 813,
+    "priors_tumor_classes": 23
+  }
+}
