@@ -2,9 +2,8 @@ FROM python:3.13-slim
 
 WORKDIR /app
 
-# Install dependencies first (cached layer)
-COPY pyproject.toml README.md ./
-RUN pip install --no-cache-dir . && rm -rf /root/.cache
+# Install dependencies only (no need to build the package itself)
+RUN pip install --no-cache-dir "fastapi>=0.115.0" "uvicorn[standard]>=0.30.0" "polars>=1.0.0" "jinja2>=3.1.0"
 
 # Copy application code and data
 COPY app/ app/
