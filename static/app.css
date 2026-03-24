@@ -1,0 +1,120 @@
+/* app.css — tumor-likelihood-tool specific styles
+ * Builds on molpath.css design tokens and base components.
+ */
+
+/* --- Hero section --- */
+.hero { grid-column: 1 / -1; }
+
+h1 { font-size: var(--mp-fs-xl); margin: 8px 0; }
+
+.tutorial-link {
+  color: var(--mp-accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.tutorial-link:hover { text-decoration: underline; }
+
+/* --- Form layout --- */
+.form-panel { animation: mp-fade-up 460ms ease both; }
+
+.form-sections {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.form-section { margin-bottom: 16px; }
+
+.section-head { margin-bottom: var(--mp-space-sm); }
+.section-head h2 { margin: 0; font-size: 1rem; }
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: var(--mp-space-sm);
+}
+
+.controls { margin-top: 12px; }
+.controls label { font-size: 0.88rem; color: var(--mp-ink-soft); }
+.controls input { width: 82px; }
+
+/* --- Results --- */
+.results-panel { animation: mp-fade-up 540ms ease both; }
+
+.notes {
+  margin-bottom: 10px;
+  font-size: 0.88rem;
+}
+
+.result-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.result-card { cursor: pointer; }
+
+.result-header { align-items: baseline; }
+.class-name { font-weight: 700; }
+.posterior { color: var(--mp-accent); font-weight: 700; }
+
+.score-meta {
+  margin-top: 6px;
+  font-size: 0.83rem;
+}
+
+.expand-hint {
+  font-size: 0.78rem;
+  margin-top: 6px;
+}
+
+/* --- Confidence banner --- */
+.confidence-tier {
+  font-size: var(--mp-fs-lg);
+  font-weight: 700;
+  margin-bottom: var(--mp-space-xs);
+}
+
+.confidence-detail { font-size: 0.88rem; }
+
+.confidence-desc {
+  font-size: 0.82rem;
+  margin-top: var(--mp-space-xs);
+  opacity: 0.8;
+}
+
+/* --- Frequency bars --- */
+.freq-bar-container { margin-top: var(--mp-space-sm); }
+
+.freq-bar-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  margin-bottom: 2px;
+}
+
+/* --- Detail (drill-down) panel --- */
+.detail-panel {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--mp-border);
+}
+
+.detail-subtype {
+  padding: var(--mp-space-sm) 10px;
+  margin-bottom: 6px;
+  border: 1px solid #ece8dc;
+  border-radius: var(--mp-radius-sm);
+  background: #faf9f5;
+}
+
+.detail-subtype-name { font-weight: 600; font-size: 0.88rem; }
+.detail-subtype-posterior { color: var(--mp-accent); font-weight: 600; font-size: 0.86rem; }
+.detail-subtype-meta { font-size: 0.78rem; margin-top: 2px; }
+
+/* --- Responsive --- */
+@media (max-width: 700px) {
+  .form-sections { grid-template-columns: 1fr; }
+  .row { grid-template-columns: 1fr; }
+}

@@ -50,12 +50,12 @@ function renderFreqBar(term) {
 
   return `
     <div class="freq-bar-container">
-      <div class="freq-bar-label">
+      <div class="freq-bar-label mp-soft">
         <span>${term.event_label}</span>
         <span>${feLabel} enriched${freqStr ? " \u00b7 " + freqStr : ""}</span>
       </div>
-      <div class="freq-bar-track">
-        <div class="freq-bar-fill${depleted ? " depleted" : ""}" style="width: ${cappedWidth}%"></div>
+      <div class="mp-bar-track">
+        <div class="mp-bar-fill${depleted ? " depleted" : ""}" style="width: ${cappedWidth}%"></div>
       </div>
     </div>
   `;
@@ -82,8 +82,8 @@ function renderDetailPanel(tumorType) {
   if (matchedSubtypes.length === 0) {
     return `
       <div class="detail-panel">
-        <div class="detail-panel-title">Detailed subtypes</div>
-        <div class="detail-no-evidence">No subtype-level evidence for these aberrations.</div>
+        <div class="mp-section-title">Detailed subtypes</div>
+        <div class="detail-no-evidence mp-soft">No subtype-level evidence for these aberrations.</div>
       </div>
     `;
   }
@@ -103,11 +103,11 @@ function renderDetailPanel(tumorType) {
 
     return `
       <div class="detail-subtype">
-        <div class="detail-subtype-header">
+        <div class="detail-subtype-header mp-flex mp-between">
           <span class="detail-subtype-name">${r.class_name}</span>
           <span class="detail-subtype-posterior">${postPct}%</span>
         </div>
-        <div class="detail-subtype-meta">Prior ${priorPct}%</div>
+        <div class="detail-subtype-meta mp-soft">${priorPct}% prior</div>
         ${bars}
       </div>
     `;
@@ -115,7 +115,7 @@ function renderDetailPanel(tumorType) {
 
   return `
     <div class="detail-panel">
-      <div class="detail-panel-title">Detailed subtypes within ${tumorType.replace(/_/g, " ")}</div>
+      <div class="mp-section-title">Detailed subtypes within ${tumorType.replace(/_/g, " ")}</div>
       ${subtypeHtml}
     </div>
   `;
@@ -124,24 +124,31 @@ function renderDetailPanel(tumorType) {
 function renderConfidence(confidence) {
   const banner = document.getElementById("confidence-banner");
   if (!confidence) {
-    banner.classList.add("hidden");
+    banner.classList.add("mp-hidden");
     return;
   }
 
-  const tierClass = confidence.tier.toLowerCase().replace(/\s+/g, "-");
+  const tierMap = {
+    "Very High": "mp-alert-success",
+    "High": "mp-alert-info",
+    "Moderate": "mp-alert-warning",
+    "Low": "mp-alert-error",
+  };
+
   const ppvPct = (confidence.historical_ppv * 100).toFixed(0);
   const postPct = (confidence.top_posterior * 100).toFixed(1);
+  const alertClass = tierMap[confidence.tier] || "mp-alert-warning";
 
-  banner.className = `confidence-banner confidence-${tierClass}`;
+  banner.className = `mp-alert ${alertClass}`;
   banner.innerHTML = `
     <div class="confidence-tier">${confidence.tier} Confidence</div>
-    <div class="confidence-detail">
+    <div class="confidence-detail mp-mono">
       Top posterior: ${postPct}% &mdash;
       Validated accuracy at this level: ${ppvPct}%
     </div>
     <div class="confidence-desc">${confidence.description}</div>
   `;
-  banner.classList.remove("hidden");
+  banner.classList.remove("mp-hidden");
 }
 
 function renderRankings(target, rankings) {
@@ -163,26 +170,26 @@ function renderRankings(target, rankings) {
       .join("");
 
     const card = document.createElement("article");
-    card.className = "result-card";
+    card.className = "mp-card result-card";
     card.innerHTML = `
-      <div class="result-header">
+      <div class="result-header mp-flex mp-between">
         <span class="class-name">${item.class_name}</span>
         <span class="posterior">${posteriorPct}%</span>
       </div>
-      <div class="score-meta">Prior ${priorPct}% | log score ${Number(item.log_score).toFixed(3)}</div>
+      <div class="score-meta mp-soft">Prior ${priorPct}% | log score ${Number(item.log_score).toFixed(3)}</div>
       ${
         freqBarsHtml
-          ? `<div class="freq-section-title">Aberration frequency in this type</div>${freqBarsHtml}`
+          ? `<div class="mp-section-title" style="margin-top:10px">Aberration frequency in this type</div>${freqBarsHtml}`
           : ""
       }
-      <div class="expand-hint">Click to see detailed subtypes</div>
+      <div class="expand-hint mp-soft">Click to see detailed subtypes</div>
     `;
 
     card.addEventListener("click", () => {
-      const isExpanded = card.classList.contains("expanded");
+      const isExpanded = card.classList.contains("active");
       // Collapse all
-      target.querySelectorAll(".result-card").forEach((c) => {
-        c.classList.remove("expanded");
+      target.querySelectorAll(".mp-card").forEach((c) => {
+        c.classList.remove("active");
         const dp = c.querySelector(".detail-panel");
         if (dp) dp.remove();
         const hint = c.querySelector(".expand-hint");
@@ -190,7 +197,7 @@ function renderRankings(target, rankings) {
       });
 
       if (!isExpanded) {
-        card.classList.add("expanded");
+        card.classList.add("active");
         const hint = card.querySelector(".expand-hint");
         if (hint) hint.textContent = "Click to collapse";
         const detailHtml = renderDetailPanel(item.class_name);
@@ -236,7 +243,7 @@ function collectPayload() {
 
 async function runPrediction(event) {
   event.preventDefault();
-  errorBox.classList.add("hidden");
+  errorBox.classList.add("mp-hidden");
   errorBox.textContent = "";
 
   let payload;
@@ -244,7 +251,7 @@ async function runPrediction(event) {
     payload = collectPayload();
   } catch (error) {
     errorBox.textContent = String(error.message || error);
-    errorBox.classList.remove("hidden");
+    errorBox.classList.remove("mp-hidden");
     return;
   }
 
@@ -270,11 +277,11 @@ async function runPrediction(event) {
     renderConfidence(lastData.confidence);
     renderRankings(resultTumor, lastData.results?.tumor?.rankings || []);
 
-    resultsPanel.classList.remove("hidden");
+    resultsPanel.classList.remove("mp-hidden");
     resultsPanel.scrollIntoView({ behavior: "smooth", block: "start" });
   } catch (error) {
     errorBox.textContent = String(error.message || error);
-    errorBox.classList.remove("hidden");
+    errorBox.classList.remove("mp-hidden");
   } finally {
     submitButton.disabled = false;
     submitButton.textContent = "Predict";

@@ -10,58 +10,59 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/static/style.css?v=6" />
+    <link rel="stylesheet" href="/static/molpath.css?v=1" />
+    <link rel="stylesheet" href="/static/app.css?v=1" />
   </head>
   <body>
-    <div class="background-glow" aria-hidden="true"></div>
-    <main class="layout">
-      <section class="panel hero">
-        <p class="eyebrow">AACR GENIE Inference</p>
+    <div class="mp-background-glow" aria-hidden="true"></div>
+    <main class="mp-layout">
+      <section class="mp-panel hero mp-animate-in">
+        <p class="mp-eyebrow">AACR GENIE Inference</p>
         <h1>Mutation/CNA Tumor Likelihood Tool</h1>
-        <p class="subtitle">
+        <p class="mp-subtitle">
           Submit one or more mutation and copy-number events to rank likely cancer origins.
           Posterior values use GENIE prevalence priors.
         </p>
-        <p class="warning">
+        <p class="mp-warning-bar">
           Research support only. This output is not a standalone diagnostic decision.
         </p>
         <p style="margin: 10px 0 0; font-size: 0.88rem;">
-          <a href="/tutorial" style="color: var(--accent); text-decoration: none; font-weight: 500;">How to read the results &rarr;</a>
+          <a href="/tutorial" class="tutorial-link">How to read the results &rarr;</a>
         </p>
       </section>
 
-      <section class="panel form-panel">
+      <section class="mp-panel form-panel mp-animate-in">
         <form id="predict-form">
           <div class="form-sections">
             <div class="form-section">
-              <div class="section-head">
+              <div class="section-head mp-flex mp-between">
                 <h2>Mutations</h2>
-                <button type="button" id="add-mutation" class="secondary">Add Mutation</button>
+                <button type="button" id="add-mutation" class="mp-btn-secondary">Add Mutation</button>
               </div>
-              <div id="mutation-rows" class="rows"></div>
+              <div id="mutation-rows" class="mp-grid"></div>
             </div>
 
             <div class="form-section">
-              <div class="section-head">
+              <div class="section-head mp-flex mp-between">
                 <h2>Copy Number Alterations</h2>
-                <button type="button" id="add-cna" class="secondary">Add CNA</button>
+                <button type="button" id="add-cna" class="mp-btn-secondary">Add CNA</button>
               </div>
-              <div id="cna-rows" class="rows"></div>
+              <div id="cna-rows" class="mp-grid"></div>
             </div>
           </div>
 
-          <div class="controls">
+          <div class="controls mp-flex">
             <label for="top-k">Top classes</label>
             <input id="top-k" type="number" min="1" max="25" value="10" />
-            <button type="submit" id="predict-button" class="primary">Predict</button>
+            <button type="submit" id="predict-button" class="mp-btn-primary">Predict</button>
           </div>
         </form>
-        <pre id="error-box" class="error hidden"></pre>
+        <pre id="error-box" class="mp-error-box mp-hidden"></pre>
       </section>
 
-      <section class="panel results-panel hidden" id="results-panel">
-        <div id="confidence-banner" class="confidence-banner hidden"></div>
-        <div id="notes" class="notes"></div>
+      <section class="mp-panel results-panel mp-hidden" id="results-panel">
+        <div id="confidence-banner" class="mp-alert mp-hidden"></div>
+        <div id="notes" class="notes mp-soft"></div>
         <div id="results-tumor" class="result-list"></div>
       </section>
     </main>
@@ -74,7 +75,7 @@
           class="mutation-protein"
           placeholder="Protein (optional, e.g., p.V600E)"
         />
-        <button type="button" class="remove-row" aria-label="Remove mutation">Remove</button>
+        <button type="button" class="remove-row mp-btn-danger" aria-label="Remove mutation">Remove</button>
       </div>
     </template>
 
@@ -85,10 +86,10 @@
           <option value="Amplification">Amplification</option>
           <option value="DeepDeletion">DeepDeletion</option>
         </select>
-        <button type="button" class="remove-row" aria-label="Remove CNA">Remove</button>
+        <button type="button" class="remove-row mp-btn-danger" aria-label="Remove CNA">Remove</button>
       </div>
     </template>
 
-    <script src="/static/app.js?v=6" defer></script>
+    <script src="/static/app.js?v=7" defer></script>
   </body>
 </html>
