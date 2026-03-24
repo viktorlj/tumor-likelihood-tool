@@ -74,16 +74,37 @@ pytest
 
 ## Deployment
 
-### Docker
+### Docker (local)
 
 ```bash
 docker build -t tumor-likelihood-tool .
 docker run -p 8000:8000 tumor-likelihood-tool
 ```
 
-### Vercel (via Docker)
+### Google Cloud Run
 
-This app can be deployed to Vercel using the Docker runtime or any platform that supports containerized Python apps.
+```bash
+# Set your project
+export PROJECT_ID=your-gcp-project-id
+export REGION=europe-west1
+
+# Build and push to Artifact Registry
+gcloud artifacts repositories create tumor-tool --repository-format=docker --location=${REGION} 2>/dev/null
+gcloud builds submit --tag ${REGION}-docker.pkg.dev/${PROJECT_ID}/tumor-tool/tumor-likelihood-tool
+
+# Deploy to Cloud Run
+gcloud run deploy tumor-likelihood-tool \
+  --image ${REGION}-docker.pkg.dev/${PROJECT_ID}/tumor-tool/tumor-likelihood-tool \
+  --region ${REGION} \
+  --platform managed \
+  --allow-unauthenticated \
+  --memory 512Mi \
+  --cpu 1 \
+  --min-instances 0 \
+  --max-instances 3
+```
+
+The app reads `$PORT` from the environment (set automatically by Cloud Run). 512 Mi memory is sufficient — the model artifacts are ~34 MB and load on first request.
 
 ## Citation
 
