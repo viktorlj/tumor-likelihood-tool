@@ -16,7 +16,7 @@ h1 { font-size: var(--mp-fs-xl); margin: 8px 0; }
 .tutorial-link:hover { text-decoration: underline; }
 
 /* --- Form layout --- */
-.form-panel { animation: mp-fade-up 460ms ease both; }
+.form-panel { animation: mp-fade-up 0.7s ease-out both; }
 
 .form-sections {
   display: grid;
@@ -40,7 +40,7 @@ h1 { font-size: var(--mp-fs-xl); margin: 8px 0; }
 .controls input { width: 82px; }
 
 /* --- Results --- */
-.results-panel { animation: mp-fade-up 540ms ease both; }
+.results-panel { animation: mp-fade-up 0.8s ease-out both; }
 
 .notes {
   margin-bottom: 10px;
