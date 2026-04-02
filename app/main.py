@@ -77,20 +77,31 @@ def create_app(
             context={"title": "How to Read the Results", "active_page": "tutorial"},
         )
 
+    def _level_info(model: TumorLikelihoodModel, level: str):
+        """Return (LevelArtifacts, DataFrame) for the given level."""
+        if level == "detailed":
+            return model.artifacts.levels["detailed"], model.artifacts.evidence_detailed_df
+        return model.artifacts.levels["tumor"], model.artifacts.evidence_tumor_df
+
+    def _class_list(level_artifacts):
+        """Build sorted list of {name, sample_count, prior_probability}."""
+        items = [
+            {
+                "name": cls,
+                "sample_count": level_artifacts.sample_counts[i],
+                "prior_probability": round(level_artifacts.prior_probabilities[i], 4),
+            }
+            for i, cls in enumerate(level_artifacts.classes)
+        ]
+        items.sort(key=lambda t: t["name"])
+        return items
+
     @app.get("/tumor-profile", response_class=HTMLResponse)
     async def tumor_profile_page(request: Request) -> HTMLResponse:
         """Serve tumor-type profile browsing page."""
         loaded_model = get_model()
-        tumor_level = loaded_model.artifacts.levels["tumor"]
-        tumor_types = [
-            {
-                "name": cls,
-                "sample_count": tumor_level.sample_counts[i],
-                "prior_probability": round(tumor_level.prior_probabilities[i], 4),
-            }
-            for i, cls in enumerate(tumor_level.classes)
-        ]
-        tumor_types.sort(key=lambda t: t["name"])
+        tumor_types = _class_list(loaded_model.artifacts.levels["tumor"])
+        detailed_types = _class_list(loaded_model.artifacts.levels["detailed"])
         return templates.TemplateResponse(
             request=request,
             name="tumor_profile.html",
@@ -98,6 +109,7 @@ def create_app(
                 "title": "Tumor-Type Profile",
                 "active_page": "tumor-profile",
                 "tumor_types": tumor_types,
+                "detailed_types": detailed_types,
             },
         )
 
@@ -123,21 +135,24 @@ def create_app(
         sort_by: str = Query(default="fold_enrichment"),
         limit: int = Query(default=50, ge=1, le=500),
         include_subthreshold: bool = Query(default=False),
+        level: str = Query(default="tumor"),
     ) -> TumorProfileResponse:
         """Return enrichment data for a specific tumor type."""
         loaded_model = get_model()
-        tumor_level = loaded_model.artifacts.levels["tumor"]
+        if level not in ("tumor", "detailed"):
+            raise HTTPException(status_code=422, detail="level must be 'tumor' or 'detailed'")
+        level_artifacts, evidence_df = _level_info(loaded_model, level)
 
-        if tumor_type not in tumor_level.class_to_index:
-            raise HTTPException(status_code=404, detail=f"Unknown tumor type: {tumor_type}")
+        if tumor_type not in level_artifacts.class_to_index:
+            raise HTTPException(status_code=404, detail=f"Unknown type: {tumor_type}")
         if evidence_type not in VALID_EVIDENCE_TYPES:
             raise HTTPException(status_code=422, detail=f"Invalid evidence_type. Must be one of: {VALID_EVIDENCE_TYPES}")
         if sort_by not in VALID_SORT_OPTIONS:
             raise HTTPException(status_code=422, detail=f"Invalid sort_by. Must be one of: {VALID_SORT_OPTIONS}")
 
-        idx = tumor_level.class_to_index[tumor_type]
+        idx = level_artifacts.class_to_index[tumor_type]
         items, total_sig = query_tumor_profile(
-            loaded_model.artifacts.evidence_tumor_df,
+            evidence_df,
             tumor_type=tumor_type,
             evidence_type=evidence_type,
             sort_by=sort_by,
@@ -147,8 +162,8 @@ def create_app(
 
         return TumorProfileResponse(
             tumor_type=tumor_type,
-            sample_count=tumor_level.sample_counts[idx],
-            prior_probability=round(tumor_level.prior_probabilities[idx], 4),
+            sample_count=level_artifacts.sample_counts[idx],
+            prior_probability=round(level_artifacts.prior_probabilities[idx], 4),
             evidence_type=evidence_type,
             sort_by=sort_by,
             total_significant=total_sig,
@@ -162,18 +177,23 @@ def create_app(
         sort_by: str = Query(default="fold_enrichment"),
         limit: int = Query(default=50, ge=1, le=500),
         include_subthreshold: bool = Query(default=False),
+        level: str = Query(default="tumor"),
     ) -> GeneProfileResponse:
         """Return enrichment data for a specific gene across tumor types."""
         loaded_model = get_model()
         gene_upper = gene.upper()
 
+        if level not in ("tumor", "detailed"):
+            raise HTTPException(status_code=422, detail="level must be 'tumor' or 'detailed'")
         if evidence_type not in VALID_EVIDENCE_TYPES:
             raise HTTPException(status_code=422, detail=f"Invalid evidence_type. Must be one of: {VALID_EVIDENCE_TYPES}")
         if sort_by not in VALID_SORT_OPTIONS:
             raise HTTPException(status_code=422, detail=f"Invalid sort_by. Must be one of: {VALID_SORT_OPTIONS}")
 
+        level_artifacts, evidence_df = _level_info(loaded_model, level)
+
         items, total_sig = query_gene_profile(
-            loaded_model.artifacts.evidence_tumor_df,
+            evidence_df,
             gene=gene_upper,
             evidence_type=evidence_type,
             sort_by=sort_by,
@@ -182,17 +202,15 @@ def create_app(
         )
 
         if not items and total_sig == 0:
-            # Check if gene exists at all in the data
-            has_gene = loaded_model.artifacts.evidence_tumor_df.filter(
+            has_gene = evidence_df.filter(
                 pl.col("gene") == gene_upper
             ).height > 0
             if not has_gene:
                 raise HTTPException(status_code=404, detail=f"Gene not found: {gene_upper}")
 
-        tumor_level = loaded_model.artifacts.levels["tumor"]
         sample_count_map = {
-            cls: tumor_level.sample_counts[i]
-            for i, cls in enumerate(tumor_level.classes)
+            cls: level_artifacts.sample_counts[i]
+            for i, cls in enumerate(level_artifacts.classes)
         }
 
         return GeneProfileResponse(

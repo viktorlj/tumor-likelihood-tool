@@ -3,19 +3,25 @@
 (function () {
   "use strict";
 
+  const levelSelect = document.getElementById("level-select");
   const tumorSelect = document.getElementById("tumor-select");
   const sortSelect = document.getElementById("sort-select");
   const subthresholdToggle = document.getElementById("show-subthreshold");
   const resultsSection = document.getElementById("results-section");
   const summaryEl = document.getElementById("profile-summary");
 
+  const tumorTypes = JSON.parse(document.getElementById("tumor-types-data").textContent);
+  const detailedTypes = JSON.parse(document.getElementById("detailed-types-data").textContent);
+
   let activeTab = "mutation_gene";
   const DEFAULT_SORT = "frequency";
-  const cache = {};
 
   function init() {
-    // Restore from URL params
     const params = new URLSearchParams(window.location.search);
+    if (params.get("level")) {
+      levelSelect.value = params.get("level");
+    }
+    populateTypeDropdown();
     if (params.get("type")) {
       tumorSelect.value = params.get("type");
     }
@@ -24,6 +30,7 @@
       subthresholdToggle.checked = true;
     }
 
+    levelSelect.addEventListener("change", onLevelChange);
     tumorSelect.addEventListener("change", onSelectionChange);
     sortSelect.addEventListener("change", onSelectionChange);
     subthresholdToggle.addEventListener("change", onSelectionChange);
@@ -37,10 +44,26 @@
     }
   }
 
+  function populateTypeDropdown() {
+    const types = levelSelect.value === "detailed" ? detailedTypes : tumorTypes;
+    tumorSelect.innerHTML = '<option value="">-- Select --</option>';
+    types.forEach((t) => {
+      const opt = document.createElement("option");
+      opt.value = t.name;
+      opt.textContent = `${t.name} (n=${t.sample_count.toLocaleString()})`;
+      tumorSelect.appendChild(opt);
+    });
+  }
+
+  function onLevelChange() {
+    const prev = tumorSelect.value;
+    populateTypeDropdown();
+    // If the previously selected type exists in the new level, keep it
+    tumorSelect.value = prev;
+    onSelectionChange();
+  }
+
   function onSelectionChange() {
-    cache.mutation_allele = null;
-    cache.mutation_gene = null;
-    cache.cna = null;
     updateURL();
     if (tumorSelect.value) {
       loadAllTabs();
@@ -51,6 +74,7 @@
 
   function updateURL() {
     const params = new URLSearchParams();
+    if (levelSelect.value !== "tumor") params.set("level", levelSelect.value);
     if (tumorSelect.value) params.set("type", tumorSelect.value);
     if (sortSelect.value !== DEFAULT_SORT) params.set("sort", sortSelect.value);
     if (subthresholdToggle.checked) params.set("subthreshold", "true");
@@ -89,6 +113,7 @@
       sort_by: sortSelect.value,
       limit: "100",
       include_subthreshold: subthresholdToggle.checked.toString(),
+      level: levelSelect.value,
     });
 
     try {
@@ -99,10 +124,9 @@
         return;
       }
       const data = await resp.json();
-      cache[evidenceType] = data;
 
-      if (evidenceType === "mutation_allele") {
-        summaryEl.innerHTML = `Showing results for <strong>${data.tumor_type}</strong> ` +
+      if (evidenceType === "mutation_gene") {
+        summaryEl.innerHTML = `Showing results for <strong>${esc(data.tumor_type)}</strong> ` +
           `(${data.sample_count.toLocaleString()} samples, prior ${(data.prior_probability * 100).toFixed(1)}%)`;
       }
 

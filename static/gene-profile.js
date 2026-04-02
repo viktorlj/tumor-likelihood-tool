@@ -5,6 +5,7 @@
 
   const geneInput = document.getElementById("gene-input");
   const searchBtn = document.getElementById("search-btn");
+  const levelSelect = document.getElementById("level-select");
   const sortSelect = document.getElementById("sort-select");
   const subthresholdToggle = document.getElementById("show-subthreshold");
   const resultsSection = document.getElementById("results-section");
@@ -19,6 +20,9 @@
     if (params.get("gene")) {
       geneInput.value = params.get("gene").toUpperCase();
     }
+    if (params.get("level")) {
+      levelSelect.value = params.get("level");
+    }
     sortSelect.value = params.get("sort") || DEFAULT_SORT;
     if (params.get("subthreshold") === "true") {
       subthresholdToggle.checked = true;
@@ -30,6 +34,10 @@
         e.preventDefault();
         onSearch();
       }
+    });
+    levelSelect.addEventListener("change", () => {
+      if (currentGene) loadAllTabs();
+      updateURL();
     });
     sortSelect.addEventListener("change", () => {
       if (currentGene) loadAllTabs();
@@ -61,6 +69,7 @@
   function updateURL() {
     const params = new URLSearchParams();
     if (currentGene) params.set("gene", currentGene);
+    if (levelSelect.value !== "tumor") params.set("level", levelSelect.value);
     if (sortSelect.value !== DEFAULT_SORT) params.set("sort", sortSelect.value);
     if (subthresholdToggle.checked) params.set("subthreshold", "true");
     const qs = params.toString();
@@ -98,6 +107,7 @@
       sort_by: sortSelect.value,
       limit: "100",
       include_subthreshold: subthresholdToggle.checked.toString(),
+      level: levelSelect.value,
     });
 
     try {
