@@ -13,6 +13,7 @@
     />
     <link rel="stylesheet" href="/static/molpath.css?v=2" />
     <link rel="stylesheet" href="/static/app.css?v=2" />
+    <link rel="stylesheet" href="/static/profile.css?v=1" />
     <style>
       .tutorial-nav {
         display: flex;
@@ -188,13 +189,11 @@
     </style>
   </head>
   <body>
+    {% include 'partials/nav.html' %}
     <div class="mp-background-glow" aria-hidden="true"></div>
     <main class="mp-layout">
       <section class="mp-panel hero">
-        <div class="tutorial-nav">
-          <p class="mp-eyebrow">Reference Guide</p>
-          <a href="/">&larr; Back to tool</a>
-        </div>
+        <p class="mp-eyebrow">Reference Guide</p>
         <h1>How to Read the Results</h1>
         <p class="mp-subtitle">
           A brief guide to the statistical values displayed by the Tumor Likelihood Tool

@@ -103,3 +103,61 @@ class MetaResponse(BaseModel):
     priors: dict[str, dict[str, int]]
     settings: dict[str, float | int | bool]
     supported_cna_states: list[str]
+
+
+# --- Profile browsing views ---
+
+
+class ProfileItem(BaseModel):
+    """Single enrichment event in a tumor-type profile."""
+
+    event_label: str
+    gene: str | None = None
+    protein_key: str | None = None
+    cna_state: str | None = None
+    fold_enrichment: float
+    q_value: float
+    affected_count: int
+    group_total: int
+    frequency_pct: float
+    log_bf: float
+    is_significant: bool
+
+
+class TumorProfileResponse(BaseModel):
+    """Response for tumor-type profile browsing."""
+
+    tumor_type: str
+    sample_count: int
+    prior_probability: float
+    evidence_type: str
+    sort_by: str
+    total_significant: int
+    items: list[ProfileItem]
+
+
+class GeneProfileItem(BaseModel):
+    """Single tumor-type row in a gene profile."""
+
+    class_name: str
+    sample_count: int
+    event_label: str | None = None
+    protein_key: str | None = None
+    cna_state: str | None = None
+    fold_enrichment: float
+    q_value: float
+    affected_count: int
+    group_total: int
+    frequency_pct: float
+    log_bf: float
+    is_significant: bool
+
+
+class GeneProfileResponse(BaseModel):
+    """Response for gene profile browsing."""
+
+    gene: str
+    evidence_type: str
+    sort_by: str
+    total_significant: int
+    items: list[GeneProfileItem]

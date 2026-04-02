@@ -49,6 +49,8 @@ class ModelArtifacts:
     model_version: str
     levels: dict[str, LevelArtifacts]
     tumor_to_detailed: dict[str, list[str]]
+    evidence_tumor_df: pl.DataFrame | None = None
+    evidence_detailed_df: pl.DataFrame | None = None
 
 
 def _load_prior_file(path: Path) -> LevelArtifacts:
@@ -78,8 +80,7 @@ def _load_prior_file(path: Path) -> LevelArtifacts:
     )
 
 
-def _load_event_file(path: Path, level_artifacts: LevelArtifacts) -> dict[str, EventContribution]:
-    df = pl.read_parquet(path)
+def _load_event_file(df: pl.DataFrame, level_artifacts: LevelArtifacts) -> dict[str, EventContribution]:
     class_to_index = level_artifacts.class_to_index
 
     bucket: dict[str, dict[str, object]] = {}
@@ -167,8 +168,11 @@ def load_model_artifacts(data_dir: Path) -> ModelArtifacts:
     detailed_level = _load_prior_file(prior_detailed_path)
     tumor_level = _load_prior_file(prior_tumor_path)
 
-    detailed_events = _load_event_file(evidence_detailed_path, detailed_level)
-    tumor_events = _load_event_file(evidence_tumor_path, tumor_level)
+    evidence_detailed_df = pl.read_parquet(evidence_detailed_path)
+    evidence_tumor_df = pl.read_parquet(evidence_tumor_path)
+
+    detailed_events = _load_event_file(evidence_detailed_df, detailed_level)
+    tumor_events = _load_event_file(evidence_tumor_df, tumor_level)
 
     detailed_level = LevelArtifacts(
         level=detailed_level.level,
@@ -194,4 +198,6 @@ def load_model_artifacts(data_dir: Path) -> ModelArtifacts:
             "tumor": tumor_level,
         },
         tumor_to_detailed=tumor_to_detailed,
+        evidence_tumor_df=evidence_tumor_df,
+        evidence_detailed_df=evidence_detailed_df,
     )

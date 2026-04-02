@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    <link rel="icon" type="image/svg+xml" href="/static/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/molpath.css?v=2" />
+    <link rel="stylesheet" href="/static/app.css?v=2" />
+    <link rel="stylesheet" href="/static/profile.css?v=1" />
+  </head>
+  <body>
+    {% include 'partials/nav.html' %}
+    <div class="mp-background-glow" aria-hidden="true"></div>
+    <main class="mp-layout">
+      <section class="mp-panel hero mp-animate-in">
+        <p class="mp-eyebrow">Enrichment Browser</p>
+        <h1>Gene Profile</h1>
+        <p class="mp-subtitle">
+          Search for a gene to see which tumor types it is most enriched in,
+          at both mutation and copy number alteration level.
+        </p>
+      </section>
+
+      <section class="mp-panel mp-animate-in">
+        <div class="profile-controls">
+          <div class="control-group">
+            <label for="gene-input">Gene Symbol</label>
+            <input
+              type="text"
+              id="gene-input"
+              list="gene-list"
+              placeholder="e.g. BRAF, TP53, KRAS"
+              autocomplete="off"
+            />
+            <datalist id="gene-list">
+              {% for g in genes %}
+              <option value="{{ g }}">
+              {% endfor %}
+            </datalist>
+          </div>
+
+          <button class="search-btn" id="search-btn">Search</button>
+
+          <div class="control-group">
+            <label for="sort-select">Sort By</label>
+            <select id="sort-select">
+              <option value="fold_enrichment">Fold Enrichment</option>
+              <option value="frequency" selected>Frequency</option>
+              <option value="q_value">q-value</option>
+            </select>
+          </div>
+
+          <div class="toggle-group">
+            <input type="checkbox" id="show-subthreshold" />
+            <label for="show-subthreshold">Show sub-threshold</label>
+          </div>
+        </div>
+      </section>
+
+      <section id="results-section" class="mp-panel mp-animate-in" style="display: none;">
+        <p id="profile-summary" class="profile-summary"></p>
+
+        <div class="tab-bar">
+          <button class="tab-button" data-tab="mutation_gene">Gene Mutations</button>
+          <button class="tab-button active" data-tab="mutation_allele">Allele Mutations</button>
+          <button class="tab-button" data-tab="cna">Copy Number Alterations</button>
+        </div>
+
+        <div id="tab-mutation_gene" class="tab-panel">
+          <div class="empty-state"><p>Loading...</p></div>
+        </div>
+        <div id="tab-mutation_allele" class="tab-panel active">
+          <div class="empty-state"><p>Loading...</p></div>
+        </div>
+        <div id="tab-cna" class="tab-panel">
+          <div class="empty-state"><p>Loading...</p></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/static/gene-profile.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,330 @@
+/* profile.css — Shared styles for navigation and profile browsing views */
+
+/* =================================================================
+   Navigation Bar
+   ================================================================= */
+
+.mp-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: var(--mp-panel);
+  border-bottom: 1px solid var(--mp-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.mp-nav-brand {
+  font-family: var(--mp-mono);
+  font-weight: 500;
+  color: var(--mp-ink);
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.mp-nav-links {
+  display: flex;
+  gap: 4px;
+}
+
+.mp-nav-link {
+  color: var(--mp-ink-soft);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 6px;
+  transition: color 0.15s, background 0.15s;
+}
+
+.mp-nav-link:hover {
+  color: var(--mp-ink);
+  background: var(--mp-bg-2);
+}
+
+.mp-nav-link.active {
+  color: var(--mp-accent);
+  background: rgba(84, 119, 146, 0.08);
+}
+
+/* =================================================================
+   Profile Controls
+   ================================================================= */
+
+.profile-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: flex-end;
+  margin-bottom: 4px;
+}
+
+.profile-controls .control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.profile-controls label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--mp-ink-soft);
+}
+
+.profile-controls select,
+.profile-controls input[type="text"] {
+  font-size: 0.88rem;
+  padding: 6px 10px;
+  border: 1px solid var(--mp-border);
+  border-radius: 6px;
+  background: var(--mp-panel);
+  color: var(--mp-ink);
+  min-width: 180px;
+}
+
+.profile-controls select:focus,
+.profile-controls input[type="text"]:focus {
+  outline: 2px solid var(--mp-accent);
+  outline-offset: -1px;
+}
+
+.profile-controls .toggle-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-bottom: 4px;
+}
+
+.profile-controls .toggle-group label {
+  text-transform: none;
+  font-weight: 400;
+  font-size: 0.84rem;
+  cursor: pointer;
+}
+
+.search-btn {
+  font-size: 0.85rem;
+  padding: 6px 16px;
+  background: var(--mp-accent);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.15s;
+  align-self: flex-end;
+}
+
+.search-btn:hover {
+  background: var(--mp-accent-hover);
+}
+
+/* =================================================================
+   Tab Bar
+   ================================================================= */
+
+.tab-bar {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid var(--mp-bg-2);
+  margin-bottom: 16px;
+  margin-top: 8px;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  padding: 8px 18px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 0.85rem;
+  color: var(--mp-ink-soft);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.tab-button:hover {
+  color: var(--mp-ink);
+}
+
+.tab-button.active {
+  color: var(--mp-accent);
+  border-bottom-color: var(--mp-accent);
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+/* =================================================================
+   Profile Tables
+   ================================================================= */
+
+.profile-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.84rem;
+}
+
+.profile-table th {
+  text-align: left;
+  padding: 8px 10px;
+  font-weight: 600;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--mp-ink-soft);
+  border-bottom: 2px solid var(--mp-bg-2);
+  white-space: nowrap;
+}
+
+.profile-table td {
+  padding: 7px 10px;
+  border-bottom: 1px solid var(--mp-bg-2);
+  vertical-align: middle;
+}
+
+.profile-table tbody tr:hover {
+  background: rgba(84, 119, 146, 0.03);
+}
+
+.profile-table tr.subthreshold {
+  opacity: 0.45;
+}
+
+.profile-table .col-numeric {
+  text-align: right;
+  font-family: var(--mp-mono);
+  font-size: 0.8rem;
+}
+
+.profile-table th.col-numeric {
+  text-align: right;
+}
+
+.profile-table .col-fe {
+  width: 180px;
+  min-width: 140px;
+}
+
+.profile-table .col-gene {
+  font-weight: 500;
+}
+
+/* =================================================================
+   Inline Enrichment Bars
+   ================================================================= */
+
+.inline-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.inline-bar-value {
+  min-width: 48px;
+  text-align: right;
+  font-family: var(--mp-mono);
+  font-size: 0.8rem;
+}
+
+.inline-bar-track {
+  flex: 1;
+  max-width: 100px;
+  height: 5px;
+  background: var(--mp-bg-2);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.inline-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  background: var(--mp-accent);
+  transition: width 0.3s ease;
+}
+
+.inline-bar-fill.depleted {
+  background: var(--mp-accent-2);
+}
+
+/* =================================================================
+   Summary & Empty State
+   ================================================================= */
+
+.profile-summary {
+  font-size: 0.85rem;
+  color: var(--mp-ink-soft);
+  margin-bottom: 12px;
+}
+
+.profile-summary strong {
+  color: var(--mp-ink);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--mp-ink-soft);
+  font-size: 0.9rem;
+}
+
+.empty-state p {
+  margin: 0;
+}
+
+/* =================================================================
+   Responsive
+   ================================================================= */
+
+@media (max-width: 700px) {
+  .mp-nav {
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px 12px;
+  }
+
+  .mp-nav-links {
+    flex-wrap: wrap;
+    gap: 4px;
+    justify-content: center;
+  }
+
+  .profile-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .profile-controls select,
+  .profile-controls input[type="text"] {
+    min-width: unset;
+  }
+
+  .profile-table {
+    font-size: 0.78rem;
+  }
+
+  .profile-table th,
+  .profile-table td {
+    padding: 5px 6px;
+  }
+
+  .inline-bar-track {
+    max-width: 60px;
+  }
+
+  .tab-button {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+}
