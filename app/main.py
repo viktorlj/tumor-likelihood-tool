@@ -2,6 +2,10 @@
 
 from __future__ import annotations
 
+import asyncio
+import gc
+import time
+from contextlib import asynccontextmanager
 from pathlib import Path
 
 from fastapi import FastAPI, HTTPException, Query, Request
@@ -38,10 +42,32 @@ def create_app(
     root_dir = Path(__file__).resolve().parents[1]
     resolved_data_dir = data_dir or (root_dir / "data")
 
+    MODEL_IDLE_TIMEOUT = 30 * 60  # seconds
+    IDLE_CHECK_INTERVAL = 5 * 60  # check every 5 minutes
+
+    @asynccontextmanager
+    async def lifespan(_app: FastAPI):
+        """Start background idle-eviction task; cancel on shutdown."""
+        async def _evict_idle_model() -> None:
+            while True:
+                await asyncio.sleep(IDLE_CHECK_INTERVAL)
+                if (
+                    _app.state.model is not None
+                    and _app.state.last_model_access
+                    and time.monotonic() - _app.state.last_model_access > MODEL_IDLE_TIMEOUT
+                ):
+                    _app.state.model = None
+                    gc.collect()
+
+        task = asyncio.create_task(_evict_idle_model())
+        yield
+        task.cancel()
+
     app = FastAPI(
         title="GENIE Tumor Likelihood Tool",
         version="0.1.0",
         summary="Bayesian tumor-type likelihood ranking from mutation/CNA evidence.",
+        lifespan=lifespan,
     )
 
     app.mount("/static", StaticFiles(directory=root_dir / "static"), name="static")
@@ -49,6 +75,7 @@ def create_app(
 
     app.state.model = model
     app.state.data_dir = resolved_data_dir
+    app.state.last_model_access = 0.0
 
     def get_model() -> TumorLikelihoodModel:
         if app.state.model is None:
@@ -56,6 +83,7 @@ def create_app(
                 app.state.model = TumorLikelihoodModel.from_data_dir(app.state.data_dir)
             except FileNotFoundError as exc:
                 raise HTTPException(status_code=503, detail=str(exc)) from exc
+        app.state.last_model_access = time.monotonic()
         return app.state.model
 
     @app.get("/", response_class=HTMLResponse)
