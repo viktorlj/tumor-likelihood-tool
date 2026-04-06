@@ -4,7 +4,6 @@ from __future__ import annotations
 
 from pathlib import Path
 
-import polars as pl
 from fastapi import FastAPI, HTTPException, Query, Request
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
@@ -78,10 +77,10 @@ def create_app(
         )
 
     def _level_info(model: TumorLikelihoodModel, level: str):
-        """Return (LevelArtifacts, DataFrame) for the given level."""
+        """Return (LevelArtifacts, parquet_path) for the given level."""
         if level == "detailed":
-            return model.artifacts.levels["detailed"], model.artifacts.evidence_detailed_df
-        return model.artifacts.levels["tumor"], model.artifacts.evidence_tumor_df
+            return model.artifacts.levels["detailed"], model.artifacts.evidence_detailed_path
+        return model.artifacts.levels["tumor"], model.artifacts.evidence_tumor_path
 
     def _class_list(level_artifacts):
         """Build sorted list of {name, sample_count, prior_probability}."""
@@ -117,7 +116,7 @@ def create_app(
     async def gene_profile_page(request: Request) -> HTMLResponse:
         """Serve gene profile browsing page."""
         loaded_model = get_model()
-        genes = get_gene_list(loaded_model.artifacts.evidence_tumor_df)
+        genes = get_gene_list(loaded_model.artifacts.evidence_tumor_path)
         return templates.TemplateResponse(
             request=request,
             name="gene_profile.html",
@@ -141,7 +140,7 @@ def create_app(
         loaded_model = get_model()
         if level not in ("tumor", "detailed"):
             raise HTTPException(status_code=422, detail="level must be 'tumor' or 'detailed'")
-        level_artifacts, evidence_df = _level_info(loaded_model, level)
+        level_artifacts, evidence_path = _level_info(loaded_model, level)
 
         if tumor_type not in level_artifacts.class_to_index:
             raise HTTPException(status_code=404, detail=f"Unknown type: {tumor_type}")
@@ -152,7 +151,7 @@ def create_app(
 
         idx = level_artifacts.class_to_index[tumor_type]
         items, total_sig = query_tumor_profile(
-            evidence_df,
+            evidence_path,
             tumor_type=tumor_type,
             evidence_type=evidence_type,
             sort_by=sort_by,
@@ -190,10 +189,10 @@ def create_app(
         if sort_by not in VALID_SORT_OPTIONS:
             raise HTTPException(status_code=422, detail=f"Invalid sort_by. Must be one of: {VALID_SORT_OPTIONS}")
 
-        level_artifacts, evidence_df = _level_info(loaded_model, level)
+        level_artifacts, evidence_path = _level_info(loaded_model, level)
 
         items, total_sig = query_gene_profile(
-            evidence_df,
+            evidence_path,
             gene=gene_upper,
             evidence_type=evidence_type,
             sort_by=sort_by,
@@ -202,9 +201,14 @@ def create_app(
         )
 
         if not items and total_sig == 0:
-            has_gene = evidence_df.filter(
-                pl.col("gene") == gene_upper
-            ).height > 0
+            import polars as pl
+            has_gene = (
+                pl.scan_parquet(evidence_path)
+                .filter(pl.col("gene") == gene_upper)
+                .head(1)
+                .collect()
+                .height > 0
+            )
             if not has_gene:
                 raise HTTPException(status_code=404, detail=f"Gene not found: {gene_upper}")
 

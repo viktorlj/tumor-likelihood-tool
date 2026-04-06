@@ -1,6 +1,11 @@
-"""Polars query functions for tumor-type and gene profile browsing views."""
+"""Polars query functions for tumor-type and gene profile browsing views.
+
+Uses lazy parquet scans so evidence DataFrames are never held in memory.
+"""
 
 from __future__ import annotations
+
+from pathlib import Path
 
 import polars as pl
 
@@ -13,7 +18,7 @@ MIN_GROUP_TOTAL = 100
 
 
 def query_tumor_profile(
-    df: pl.DataFrame,
+    parquet_path: Path,
     tumor_type: str,
     evidence_type: str = "mutation_allele",
     sort_by: str = "fold_enrichment",
@@ -32,7 +37,7 @@ def query_tumor_profile(
     if evidence_type in ("mutation_allele", "mutation_gene"):
         base_filter = base_filter & (pl.col("group_total") >= MIN_GROUP_TOTAL)
 
-    result = df.filter(base_filter)
+    result = pl.scan_parquet(parquet_path).filter(base_filter).collect()
 
     result = result.with_columns(
         (pl.col("affected_count") / pl.col("group_total") * 100)
@@ -67,7 +72,7 @@ def query_tumor_profile(
 
 
 def query_gene_profile(
-    df: pl.DataFrame,
+    parquet_path: Path,
     gene: str,
     evidence_type: str = "mutation_gene",
     sort_by: str = "fold_enrichment",
@@ -86,7 +91,7 @@ def query_gene_profile(
     if evidence_type in ("mutation_allele", "mutation_gene"):
         base_filter = base_filter & (pl.col("group_total") >= MIN_GROUP_TOTAL)
 
-    result = df.filter(base_filter)
+    result = pl.scan_parquet(parquet_path).filter(base_filter).collect()
 
     result = result.with_columns(
         (pl.col("affected_count") / pl.col("group_total") * 100)
@@ -120,15 +125,17 @@ def query_gene_profile(
     return result.select(columns).to_dicts(), total_significant
 
 
-def get_gene_list(df: pl.DataFrame) -> list[str]:
+def get_gene_list(parquet_path: Path) -> list[str]:
     """Return sorted list of unique gene symbols in the evidence data."""
     return sorted(
-        df.filter(
+        pl.scan_parquet(parquet_path)
+        .filter(
             pl.col("evidence_type").is_in(["mutation_allele", "mutation_gene", "cna"])
         )
         .select("gene")
         .drop_nulls()
         .unique()
+        .collect()
         .to_series()
         .to_list()
     )

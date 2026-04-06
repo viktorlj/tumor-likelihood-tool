@@ -49,8 +49,8 @@ class ModelArtifacts:
     model_version: str
     levels: dict[str, LevelArtifacts]
     tumor_to_detailed: dict[str, list[str]]
-    evidence_tumor_df: pl.DataFrame | None = None
-    evidence_detailed_df: pl.DataFrame | None = None
+    evidence_tumor_path: Path | None = None
+    evidence_detailed_path: Path | None = None
 
 
 def _load_prior_file(path: Path) -> LevelArtifacts:
@@ -198,6 +198,6 @@ def load_model_artifacts(data_dir: Path) -> ModelArtifacts:
             "tumor": tumor_level,
         },
         tumor_to_detailed=tumor_to_detailed,
-        evidence_tumor_df=evidence_tumor_df,
-        evidence_detailed_df=evidence_detailed_df,
+        evidence_tumor_path=evidence_tumor_path,
+        evidence_detailed_path=evidence_detailed_path,
     )
