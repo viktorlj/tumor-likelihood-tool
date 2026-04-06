@@ -3,7 +3,9 @@
 from __future__ import annotations
 
 import asyncio
+import ctypes
 import gc
+import sys
 import time
 from contextlib import asynccontextmanager
 from pathlib import Path
@@ -58,6 +60,12 @@ def create_app(
                 ):
                     _app.state.model = None
                     gc.collect()
+                    # Force glibc to release free memory back to the OS
+                    if sys.platform == "linux":
+                        try:
+                            ctypes.CDLL("libc.so.6").malloc_trim(0)
+                        except OSError:
+                            pass
 
         task = asyncio.create_task(_evict_idle_model())
         yield
