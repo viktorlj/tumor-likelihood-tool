@@ -284,6 +284,67 @@
 }
 
 /* =================================================================
+   Footer (AACR GENIE attribution)
+   ================================================================= */
+
+.mp-footer {
+  margin-top: 40px;
+  padding: 18px 20px;
+  background: var(--mp-panel);
+  border-top: 1px solid var(--mp-border);
+}
+
+.mp-footer-inner {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mp-footer-logo-link {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.mp-footer-logo {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+.mp-footer-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: var(--mp-ink-soft);
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.mp-footer-text p {
+  margin: 0;
+}
+
+.mp-footer-credit a,
+.mp-footer-links a {
+  color: var(--mp-accent);
+  text-decoration: none;
+}
+
+.mp-footer-credit a:hover,
+.mp-footer-links a:hover {
+  color: var(--mp-accent-hover);
+  text-decoration: underline;
+}
+
+.mp-footer-sep {
+  margin: 0 6px;
+  color: var(--mp-border);
+}
+
+/* =================================================================
    Responsive
    ================================================================= */
 
@@ -326,5 +387,15 @@
   .tab-button {
     padding: 6px 10px;
     font-size: 0.8rem;
+  }
+
+  .mp-footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .mp-footer-logo {
+    height: 40px;
   }
 }
