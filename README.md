@@ -16,6 +16,11 @@ Results are shown at two levels:
 - **Tumor Type** (23 broad categories, e.g., "SKIN_AND_MELANOMA")
 - **Cancer Type Detailed** (200+ specific diagnoses, e.g., "Cutaneous Melanoma")
 
+## Caveats
+
+1. **For research use and clinical decision support only.** Not a standalone diagnostic device. Outputs may be incomplete or incorrect and must be reviewed by qualified experts in the full clinical, laboratory, and histopathological context. The authors assume no responsibility for clinical decisions or other consequences of use.
+2. Tumor likelihoods depend on the submitted alterations, the panel content, and the representativeness of the AACR GENIE cohort; results should be interpreted together with morphology, immunophenotype, clinical history, and local assay validation.
+
 ## Quick Start
 
 ```bash

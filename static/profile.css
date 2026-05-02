@@ -333,6 +333,10 @@
   text-decoration: none;
 }
 
+.mp-footer-disclaimer {
+  max-width: 920px;
+}
+
 .mp-footer-credit a:hover,
 .mp-footer-links a:hover {
   color: var(--mp-accent-hover);
